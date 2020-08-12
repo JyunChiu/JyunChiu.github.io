@@ -1,0 +1,133 @@
+@font-face {
+  font-family: cwTeXYent;
+  src: url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+}
+
+.header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.footer {
+  background-color:#2D2D2D;
+  height: 100px;
+  padding: 20px;
+  color: white;
+  justify-content: center;
+  display: flex;
+}
+
+.test{
+  background-color: red;
+}
+
+.AddMovie {
+  background: #2D2D2D;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  margin: 2em 1em;
+  padding: 0.25em 1em;
+  align-items: center;
+  border: 1px solid white;  
+  border-radius: 3px;
+
+  &:hover {
+    color: #2D2D2D ;
+    background: white;
+  }
+}
+
+  .wrapper{
+  font-family: 'cwTeXYen', sans-serif;
+  color: white;
+  margin-top: 50px;
+  width: 55%;
+  background: #423F3F;
+  border-radius: 5px;
+  box-shadow:0px 8px 18px -5px rgba(0,0,0,0.4);
+  position: relative;
+
+  &:hover{
+    .overlay {
+      display: block;
+      background: rgba(0, 0, 0, .6);
+    }
+    .buttonInside {
+      opacity: 1;
+    }
+  }
+  }
+
+  .overlay {
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.5s ease;
+  }
+ 
+
+  .buttonInside {
+    position: absolute;
+    width:50%;
+    top: 24px;
+    left: 16px;
+    /* background:blue; */
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity .35s ease;
+  }
+
+
+  .buttonEdit {
+    cursor: pointer;
+    border-radius: 2px;
+    width: 85px;
+    padding: 10px 0px;
+    /* margin-right: 6em; */
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 3px;
+    color: #2D2D2D;
+    background: white;
+    border: solid 1px white;
+    z-index: 1;
+    box-shadow: 0px 5px 5px 3px rgba(0, 0, 0,0.5);
+
+    &:hover{
+      box-shadow: 0px 0px 10px 3px rgba(255, 255, 255,0.4);
+    }
+  }
+  
+  .buttonDelete {
+    cursor: pointer;
+    border-radius: 2px;
+    width: 85px;
+    padding: 10px 0px;
+    margin-top: 20px;
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 3px;
+    /* color: #2D2D2D; */
+    color: white;
+    /* background: white; */
+    border: solid 1px white;
+    z-index: 1;
+    box-shadow: 0px 5px 5px 3px rgba(0, 0, 0,0.5);
+
+    &:hover{
+        box-shadow: 0px 0px 10px 3px rgba(255, 255, 255,0.4);
+    }
+  }
+
+
+  /* .avtivepage{
+    background:blue;
+  } */
