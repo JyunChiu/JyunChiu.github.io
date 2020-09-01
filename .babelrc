@@ -1,36 +1,51 @@
 {
-	"presets": [["env", {"modules": false}], "react", "stage-0"],
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false
+      }
+    ],
+    "react",
+    "stage-0"
+  ],
   // 不加react(npm install babel-preset-react) mocha無法測試
-	// "presets": [["es2015", {"modules": false}], "react", "stage-0"],
-	// "presets": ["es2015", "react", "stage-0"],
+  // "presets": [["es2015", {"modules": false}], "react", "stage-0"],
+  // "presets": ["es2015", "react", "stage-0"],
   "plugins": [
     "react-hot-loader/babel",
     "transform-decorators-legacy"
   ],
-	"env": {
+  "env": {
     "test": {
       "plugins": [
         "babel-plugin-rewire",
         "transform-es2015-modules-commonjs",
-        ["module-resolver", {
-          "root": ["."],
-          "alias": {
-            "~~components": "./src/components",
-            "~~containers": "./src/containers",
-            "~~features": "./src/features",
-            "~~actions": "./src/actions",
-            "~~reducers": "./src/reducers",
-            "~~sagas": "./src/sagas",
-            "~~utils": "./src/utils",
-            "~~static": "./src/static",
-            "~~apis": "./src/apis",
-            "~~store": "./src/store",
-            "~~middlewares": "./src/middlewares",
-            "~~config": "./src/config",
-            "~~epics": "./src/epics",
-            "~~jest": "./test/unit/jest"
+        [
+          "module-resolver",
+          {
+            "root": [
+              "."
+            ],
+            "alias": {
+              "~~components": "./src/components",
+              "~~containers": "./src/containers",
+              "~~features": "./src/features",
+              "~~actions": "./src/actions",
+              "~~reducers": "./src/reducers",
+              "~~sagas": "./src/sagas",
+              "~~utils": "./src/utils",
+              "~~static": "./src/static",
+              "~~apis": "./src/apis",
+              "~~store": "./src/store",
+              "~~middlewares": "./src/middlewares",
+              "~~routes": "./src/routes",
+              "~~config": "./src/config",
+              "~~epics": "./src/epics",
+              "~~jest": "./test/unit/jest"
+            }
           }
-        }]
+        ]
       ]
     }
   }
