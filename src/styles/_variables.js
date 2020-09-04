@@ -7,7 +7,7 @@
 export const COLORS = {
   BLACK: '#333333',
   WHITE: '#f9f9f9',
-  GRAY: '#7f939c'
+  GRAY: '#7f939c',
 }
 
 export const FONT_FAMILY = {

@@ -10,6 +10,8 @@ import Footer from '../../components/Footer'
 const Div = styled.div`
   width: 100%;
   height: 100vh;
+  overflow: hidden;
+  overflow: hide;
   position: relative;
 
   .nav{
@@ -44,7 +46,9 @@ const App = (props) => {
         {props.children}
       </div>
       <div className="fot">
-        <Footer />
+        <Footer
+          isDark={isDark}
+        />
       </div>
     </Div>
   );

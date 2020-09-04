@@ -1,15 +1,16 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
+import { COLORS, FONT_FAMILY } from '../../styles/_variables';
 
 const StyledBurger = styled.button`
   display: none;
   @media (max-width: 500px) {
     position: absolute;
-    top: 1.5rem;
+    top: 1.8rem;
     left: 2.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 1rem;
     background: transparent;
     border: none;
@@ -28,7 +29,7 @@ const StyledBurger = styled.button`
     div {
       width: 1.3rem;
       height: 3px;
-      background: ${({ isOpen }) => (isOpen ? 'rgba(255, 255, 255, 1)' : 'rgba(10, 74, 154, 1)')};
+      background: ${({ isOpen }) => (isOpen ? 'rgba(255, 255, 255, 1)' : COLORS.GRAY)};
       transition: all 0.3s linear;
       position: relative;
       transform-origin: 1px;
@@ -37,12 +38,12 @@ const StyledBurger = styled.button`
         transform: ${({ isOpen }) => (isOpen ? 'rotate(45deg)' : 'rotate(0)')};
       }
 
-      :nth-child(2) {
+      /* :nth-child(2) {
         opacity: ${({ isOpen }) => (isOpen ? '0' : '1')};
         transform: ${({ isOpen }) => (isOpen ? 'translateX(20px)' : 'translateX(0)')};
-      }
+      } */
 
-      :nth-child(3) {
+      :nth-child(2) {
         transform: ${({ isOpen }) => (isOpen ? 'rotate(-45deg)' : 'rotate(0)')};
       }
     }
@@ -55,7 +56,7 @@ const HamburgerIcon = (props) => {
     <StyledBurger isOpen={isHambugerOpen} onClick={() => setIsHambugerOpen(!isHambugerOpen)}>
       <div />
       <div style={{ width: '0.8rem' }} />
-      <div />
+      {/* <div /> */}
     </StyledBurger>
   );
 };

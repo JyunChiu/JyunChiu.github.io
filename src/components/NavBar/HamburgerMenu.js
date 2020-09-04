@@ -1,17 +1,20 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
 import { NAV_BAR_INFO } from './NavBarConsts';
+import { COLORS, FONT_FAMILY } from '../../styles/_variables';
+import Switch from '../../components/Switch';
 
 const StyledMenu = styled.div`
   display: none;
   letter-spacing: 1px;
   font-size: 0.9rem;
   @media (max-width: 500px) {
+    letter-spacing: 2px;
     width: 45%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgb(17, 60, 113, 0.85);
+    background: rgb(152, 167, 175, 0.7);
     height: 100vh;
     text-align: left;
     padding: 5rem 0 2rem;
@@ -23,55 +26,50 @@ const StyledMenu = styled.div`
     box-shadow: 2px 0px 15px 0 rgba(0, 0, 0, 0.5);
     transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(-150%)')};
 
-    .logo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border-bottom: 1px solid rgb(255, 255, 255, 0.3);
-      padding: 0 1.5rem;
-      margin-bottom: 1.5rem;
-      &--pic {
-        width: 2.5rem;
-        &:hover {
-          opacity: 0.8;
-        }
-      }
-      &--text {
-        color: rgb(255, 255, 255, 1);
-        font-size: 1rem;
-        font-weight: 600;
-        letter-spacing: 3px;
-        margin: 0.8rem 0;
-        &:hover {
-          opacity: 0.8;
-        }
-      }
+    .site-name{
+      width: 3rem;
+      font-family: ${FONT_FAMILY.SITE_NAME};
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 1rem;
+      background: #acbac1;
+      color: ${props => props.isDark ? COLORS.BLACK : COLORS.WHITE};
+      margin: 1rem 0 2.5rem;
+      box-shadow: 3px 4px 8px 0px #6F6F6F;
     }
 
-    .link-btn {
-      display: block;
-      color: rgb(255, 255, 255, 1);
-      border-bottom: 4px solid white;
-      border-color: transparent;
-      padding: 0.25rem 0rem;
-      text-align: center;
-      margin-bottom: 1.5rem;
-      &:hover {
-        cursor: pointer;
-        border-color: #25eeff;
-      }
+    .switch-box{
+      align-self: center;
+      padding-top: 2rem;
+      border-top: 1px solid #7f939c;
+      border-color: ${props => props.isDark ? COLORS.BLACK : COLORS.WHITE};
+      display: flex;
+      align-items: center;
+      font-size: 0.6rem;
+      justify-content: space-between;
+      width: 9rem;
+      justify-content: space-between;
+      color: ${props => props.isDark ? COLORS.BLACK : COLORS.WHITE};
     }
   }
 `;
 
 const HamburgerMenu = (props) => {
-  const { isHambugerOpen } = props;
+  const { isHambugerOpen, isDark, switchThemeColor } = props;
   return (
-    <StyledMenu isOpen={isHambugerOpen}>
-      <a className="logo" href={NAV_BAR_INFO.LOGO.url}>
-        <img className="logo--pic" src="/icon/logo.png" alt="" />
-        <div className="logo--text"> {NAV_BAR_INFO.LOGO.text} </div>
-      </a>
+    <StyledMenu isOpen={isHambugerOpen} isDark={isDark}>
+      <div className="site-name">
+        Jin Chiu
+      </div>
+      <div className="switch-box">
+        LIGHT
+            <Switch
+          checked={isDark}
+          onChange={switchThemeColor}
+          color="#4c4c4c"
+        />
+            DARK
+          </div>
     </StyledMenu>
   );
 };

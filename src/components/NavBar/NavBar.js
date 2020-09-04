@@ -4,19 +4,18 @@ import { NavLink } from 'react-router-dom';
 import { NAV_BAR_INFO } from './NavBarConsts';
 import HamburgerMenu from './HamburgerMenu';
 import HamburgerIcon from './HamburgerIcon';
-import { COLORS, FONT_FAMILY, FONT_SIZE } from '../../styles/_variables'
-import Switch from '../../components/Switch'
+import { COLORS, FONT_FAMILY, FONT_SIZE } from '../../styles/_variables';
+import Switch from '../../components/Switch';
 
 
 const StyledNavBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 1rem 5rem 1rem 4rem;
+  padding: 1.2rem 8%;
   letter-spacing: 2px;
   background: ${props => props.isDark ? COLORS.BLACK : COLORS.WHITE};
   color: ${props => props.isDark ? COLORS.WHITE : COLORS.BLACK};
-  height: 4rem;
 
   .left-box {
     display: flex;
@@ -29,6 +28,7 @@ const StyledNavBar = styled.nav`
       background: #acbac1;
       color: ${props => props.isDark ? COLORS.BLACK : COLORS.WHITE};
       margin-right: 2rem;
+      box-shadow: 3px 4px 8px 0px ${props => props.isDark ? '#598683' : '#6F6F6F'};
     }
   }
 
@@ -36,12 +36,10 @@ const StyledNavBar = styled.nav`
     display: flex;
     align-items: flex-start;
     font-size: 1rem;
-    /* background: wheat; */
     padding: 0rem 1rem;
   }
 
   .switch-box{
-    /* background: red; */
     align-self: center;
     padding-left: 1.5rem;
     border-left: 1px solid #7f939c;
@@ -54,20 +52,20 @@ const StyledNavBar = styled.nav`
   }
 
   @media (max-width: 500px) {
-    .left-box .logo {
+    justify-content: flex-end;
+    padding: 1.8rem 5% 1rem;
+    .left-box {
       display: none;
     }
-
+    
     .right-box {
-      .nav-items {
-        display: none;
-      }
+     padding: 0
     }
   }
 `;
 
 const StyledNavLink = styled(NavLink)`
-  margin: 0rem 2rem 0;
+  margin: 0rem 2rem 0.3rem;
   text-decoration: none;
   color: ${props => props.isDark ? COLORS.WHITE : COLORS.BLACK};
   opacity: 0.4;
@@ -86,6 +84,11 @@ const StyledNavLink = styled(NavLink)`
 
   &:hover{
     opacity: .8;
+  }
+
+  @media (max-width: 500px) {
+    margin: 0rem 1rem 0rem;
+      font-size: 0.8rem;
   }
 `
 
@@ -121,8 +124,12 @@ const NavBar = (props) => {
           ))}
         </div>
       </StyledNavBar>
-      {/* <HamburgerIcon isHambugerOpen={isHambugerOpen} setIsHambugerOpen={setIsHambugerOpen} />
-      <HamburgerMenu isHambugerOpen={isHambugerOpen} /> */}
+      <HamburgerIcon isHambugerOpen={isHambugerOpen} setIsHambugerOpen={setIsHambugerOpen} />
+      <HamburgerMenu
+        isDark={isDark}
+        switchThemeColor={switchThemeColor}
+        isHambugerOpen={isHambugerOpen}
+      />
     </Fragment>
   );
 };
