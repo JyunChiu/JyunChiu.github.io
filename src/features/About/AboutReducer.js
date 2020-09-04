@@ -1,5 +1,5 @@
 import { handleActions } from 'redux-actions';
-import { actionTypes } from './HomeActions';
+import { actionTypes } from './AboutActions';
 const initialState = {
   test: 123,
 };

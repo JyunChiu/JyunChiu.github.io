@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import { store, history } from './store';
 import Routes from './routes/routes';
+import './styles/main.scss'
 
 
 const App = () => (

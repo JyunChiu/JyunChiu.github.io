@@ -2,14 +2,15 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { compose } from 'recompose';
-import * as HomeActions from './HomeActions';
+import * as ProtfolioActions from './ProtfolioActions';
+import StyledWrapper from '../../components/StyledWrapper';
 
 
 const Div = styled.div`
 `;
 
 
-const Home = (props) => {
+const Protfolio = (props) => {
 
   const { test, testAction } = props;
   function handleClick() {
@@ -19,21 +20,17 @@ const Home = (props) => {
   console.log('HOME props', props);
   return (
     <Div>
-      Home
-      {test}
-      <button
-        onClick={handleClick}
-      >button</button>
+      Protfolio
     </Div>
   );
 };
 
 const mapStateToProps = (state) => ({
-  test: state.home.test,
+  test: state.protfolio.test,
 });
 
 const mapDispatchToProps = {
-  testAction: HomeActions.testAction,
+  testAction: ProtfolioActions.testAction,
 };
 
-export default compose(connect(mapStateToProps, mapDispatchToProps))(Home);
+export default compose(connect(mapStateToProps, mapDispatchToProps))(Protfolio);

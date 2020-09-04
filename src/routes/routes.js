@@ -14,8 +14,13 @@ const Routes = () => (
     <Switch>
       <Route
         exact
-        path="/"
-        component={loadable(() => import(/* webpackChunkName: "Home" */ '../features/Home'))}
+        path="/about"
+        component={loadable(() => import(/* webpackChunkName: "About" */ '../features/About'))}
+      />
+      <Route
+        exact
+        path="/protfolio"
+        component={loadable(() => import(/* webpackChunkName: "About" */ '../features/Protfolio'))}
       />
     </Switch>
   </App>
