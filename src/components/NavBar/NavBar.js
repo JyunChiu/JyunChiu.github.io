@@ -23,7 +23,7 @@ const StyledNavBar = styled.nav`
     .site-name{
       font-family: ${FONT_FAMILY.SITE_NAME};
       font-weight: 600;
-      font-size: 1rem;
+      font-size: ${FONT_SIZE.WEB.BASE};
       padding: 1rem;
       background: #acbac1;
       color: ${props => props.isDark ? COLORS.BLACK : COLORS.WHITE};
@@ -35,7 +35,7 @@ const StyledNavBar = styled.nav`
   .right-box {
     display: flex;
     align-items: flex-start;
-    font-size: 1rem;
+    font-size: ${FONT_SIZE.WEB.BASE};
     padding: 0rem 1rem;
   }
 
@@ -88,7 +88,7 @@ const StyledNavLink = styled(NavLink)`
 
   @media (max-width: 500px) {
     margin: 0rem 1rem 0rem;
-      font-size: 0.8rem;
+    font-size: ${FONT_SIZE.MOB.BASE};
   }
 `
 

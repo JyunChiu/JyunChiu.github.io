@@ -15,7 +15,12 @@ export const FONT_FAMILY = {
 }
 
 export const FONT_SIZE = {
-  BASE: '0.9rem',
+  WEB: {
+    BASE: '0.95rem',
+  },
+  MOB: {
+    BASE: '0.8rem',
+  }
 }
 
 // 字型設定

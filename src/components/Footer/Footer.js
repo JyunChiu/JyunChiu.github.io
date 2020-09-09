@@ -14,7 +14,7 @@ const StyledFooter = styled.footer`
   padding: 1rem 0;
   
   >div{
-    transform: scale(0.85);
+    transform: scale(0.8);
   }
   @media (max-width: 500px) {
     >div{

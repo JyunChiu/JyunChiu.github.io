@@ -12,7 +12,12 @@ const Div = styled.div`
   letter-spacing: 2px;
   background: ${props => props.isDark ? COLORS.BLACK : COLORS.WHITE};
   color: ${props => props.isDark ? COLORS.WHITE : COLORS.BLACK};
-  height: 100vh;
+  min-height: 100vh;
+
+  >div{
+    background: red;
+    height: 100rem;
+  }
 `;
 
 
@@ -27,11 +32,11 @@ const About = (props) => {
   return (
     <Div isDark={isDark}>
       About
-      <StyledWrapper>
-        {/* <div>
+      {/* <StyledWrapper>
+        <div>
           ddd
-        </div> */}
-      </StyledWrapper>
+        </div>
+      </StyledWrapper> */}
     </Div>
   );
 };

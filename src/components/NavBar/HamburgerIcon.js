@@ -44,7 +44,8 @@ const StyledBurger = styled.button`
       } */
 
       :nth-child(2) {
-        transform: ${({ isOpen }) => (isOpen ? 'rotate(-45deg)' : 'rotate(0)')};
+        width: ${({ isOpen }) => (isOpen ? '1.3rem' : '0.8rem')};
+        transform: ${({ isOpen }) => (isOpen ? 'translateY(5px) rotate(-45deg)' : 'rotate(0)')};
       }
     }
   }
@@ -55,7 +56,7 @@ const HamburgerIcon = (props) => {
   return (
     <StyledBurger isOpen={isHambugerOpen} onClick={() => setIsHambugerOpen(!isHambugerOpen)}>
       <div />
-      <div style={{ width: '0.8rem' }} />
+      <div />
       {/* <div /> */}
     </StyledBurger>
   );
