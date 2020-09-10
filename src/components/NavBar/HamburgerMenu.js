@@ -8,16 +8,16 @@ const StyledMenu = styled.div`
   display: none;
   letter-spacing: 1px;
   font-size: 0.9rem;
+  letter-spacing: 2px;
+  height: 100vh;
+  text-align: right;
+  padding: 5rem 0 2rem;
+  background: rgb(152, 167, 175, 0.7);
   @media ${RWD_SIZE.S} {
-    letter-spacing: 2px;
-    width: 45%;
+    width: 18rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgb(152, 167, 175, 0.7);
-    height: 100vh;
-    text-align: left;
-    padding: 5rem 0 2rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -28,7 +28,7 @@ const StyledMenu = styled.div`
     backdrop-filter: blur(3px);
 
     .site-name{
-      width: 3rem;
+      width: 5rem;
       font-family: ${FONT_FAMILY.SITE_NAME};
       font-weight: 600;
       font-size: 1rem;
@@ -48,9 +48,17 @@ const StyledMenu = styled.div`
       align-items: center;
       font-size: 0.6rem;
       justify-content: space-between;
-      width: 9rem;
+      width: 10rem;
       justify-content: space-between;
       color: ${props => props.isDark ? COLORS.BLACK : COLORS.WHITE};
+    }
+  }
+  @media ${RWD_SIZE.XS} {
+    width: 15rem;
+    .site-name{
+      width: 3rem;
+    }
+    .switch-box{
     }
   }
 `;
