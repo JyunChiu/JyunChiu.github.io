@@ -7,22 +7,19 @@ import * as CommonActions from '../../redux/CommonActions';
 import NavBar from '../../components/NavBar';
 import Footer from '../../components/Footer';
 import { COLORS } from '../../styles/_variables';
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
 
 
 const Div = styled.div`
-  width: 100%;
   position: relative;
 
-  .nav{
-    width: 100%;
-    /* position: absolute;
-    top: 0 */
-  }
-  .fot{
-    width: 100%;
-    position: absolute;
-    bottom: 0
+  .icon-box{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 12rem;
+    left: 3rem;
   }
 
   .scroll-up-btn{
@@ -56,25 +53,26 @@ const App = (props) => {
   console.log('eee', isDark)
   return (
     <Div isDark={isDark}>
-      <div className="nav">
-        <NavBar
-          isDark={isDark}
-          switchThemeColor={switchThemeColor}
-        />
-      </div>
+      <NavBar
+        isDark={isDark}
+        switchThemeColor={switchThemeColor}
+      />
       <div>
         {props.children}
       </div>
-      <div className="fot">
-        <Footer
-          isDark={isDark}
-        />
+      <Footer
+        isDark={isDark}
+      />
+      <div className="icon-box">
+        <FaFacebookF />
+        <FaLinkedinIn />
       </div>
 
       <ScrollToTop
         showUnder={80}
         style={{
           bottom: 80,
+          right: 50
         }}
       >
         <div className="scroll-up-btn">

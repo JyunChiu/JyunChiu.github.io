@@ -5,13 +5,13 @@ import { FOOTER_BUTTONS } from './FooterConsts';
 
 const StyledFooter = styled.footer`
   display: flex;
-  background: ${props => props.isDark ? COLORS.BLACK : COLORS.WHITE};
+  background: ${props => props.isDark ? '#2f2f2f' : '#FFFFFF'};
   /* background: ${props => props.isDark ? '#2f2f2f' : '#FFFFFF'}; */
   color: ${props => props.isDark ? COLORS.WHITE : COLORS.BLACK};
   justify-content: center;
   letter-spacing: 3px;
   font-size: 12px;
-  padding: 1rem 0;
+  padding: 1rem 0 2rem;
   
   >div{
     transform: scale(0.8);
@@ -19,7 +19,7 @@ const StyledFooter = styled.footer`
   @media (max-width: 500px) {
     >div{
     transform: scale(0.7);
-  }
+    }
   }
 `;
 

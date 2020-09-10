@@ -1,14 +1,14 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
 import { NAV_BAR_INFO } from './NavBarConsts';
-import { COLORS, FONT_FAMILY } from '../../styles/_variables';
+import { COLORS, FONT_FAMILY, RWD_SIZE } from '../../styles/_variables';
 import Switch from '../../components/Switch';
 
 const StyledMenu = styled.div`
   display: none;
   letter-spacing: 1px;
   font-size: 0.9rem;
-  @media (max-width: 500px) {
+  @media ${RWD_SIZE.S} {
     letter-spacing: 2px;
     width: 45%;
     display: flex;
@@ -25,6 +25,7 @@ const StyledMenu = styled.div`
     z-index: 10;
     box-shadow: 2px 0px 15px 0 rgba(0, 0, 0, 0.5);
     transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(-150%)')};
+    backdrop-filter: blur(3px);
 
     .site-name{
       width: 3rem;

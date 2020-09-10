@@ -1,8 +1,22 @@
 // 全站統一的部分
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 
 body {
   @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC|Roboto&display=swap');
   font-family: 'Roboto', 'Noto Sans TC', sans-serif;
   margin: 0;
+}
+
+
+@mixin medium{
+  @media (max-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin small{
+  @media (max-width: 400px){
+    @content;
+  }
 }

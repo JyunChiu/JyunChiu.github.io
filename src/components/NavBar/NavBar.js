@@ -1,11 +1,13 @@
-import React, { useState, Fragment } from 'react';
+import React, { useEffect, useState, Fragment } from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import _debounce from 'lodash/debounce';
 import { NAV_BAR_INFO } from './NavBarConsts';
 import HamburgerMenu from './HamburgerMenu';
 import HamburgerIcon from './HamburgerIcon';
 import { COLORS, FONT_FAMILY, FONT_SIZE } from '../../styles/_variables';
 import Switch from '../../components/Switch';
+import { RWD_SIZE } from '../../styles/_variables';
 
 
 const StyledNavBar = styled.nav`
@@ -51,7 +53,7 @@ const StyledNavBar = styled.nav`
     justify-content: space-between;
   }
 
-  @media (max-width: 500px) {
+  @media ${RWD_SIZE.S} {
     justify-content: flex-end;
     padding: 1.8rem 5% 1rem;
     .left-box {
@@ -95,6 +97,19 @@ const StyledNavLink = styled(NavLink)`
 const NavBar = (props) => {
   const { isDark, switchThemeColor } = props
   const [isHambugerOpen, setIsHambugerOpen] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('resize', reportWindowSize);
+    reportWindowSize();
+
+    return () => window.removeEventListener('resize', reportWindowSize);
+  }, [])
+
+  const reportWindowSize = _debounce(() => {
+    if (window.innerWidth > 500) {
+      setIsHambugerOpen(false)
+    }
+  }, 600);
 
   return (
     <Fragment>

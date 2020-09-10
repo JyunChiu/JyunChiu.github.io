@@ -1,10 +1,10 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
-import { COLORS, FONT_FAMILY } from '../../styles/_variables';
+import { COLORS, RWD_SIZE } from '../../styles/_variables';
 
 const StyledBurger = styled.button`
   display: none;
-  @media (max-width: 500px) {
+  @media ${RWD_SIZE.S} {
     position: absolute;
     top: 1.8rem;
     left: 2.5rem;
