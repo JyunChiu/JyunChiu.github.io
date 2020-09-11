@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { NAV_BAR_INFO } from './NavBarConsts';
 import { COLORS, FONT_FAMILY, RWD_SIZE } from '../../styles/_variables';
 import Switch from '../../components/Switch';
+import SocialBox from '../../components/SocialBox';
 
 const StyledMenu = styled.div`
   display: none;
@@ -52,13 +53,15 @@ const StyledMenu = styled.div`
       justify-content: space-between;
       color: ${props => props.isDark ? COLORS.BLACK : COLORS.WHITE};
     }
+
+    .menu--social-box{
+      margin-top: 2rem;
+    }
   }
   @media ${RWD_SIZE.XS} {
     width: 15rem;
     .site-name{
       width: 3rem;
-    }
-    .switch-box{
     }
   }
 `;
@@ -72,13 +75,20 @@ const HamburgerMenu = (props) => {
       </div>
       <div className="switch-box">
         LIGHT
-            <Switch
+        <Switch
           checked={isDark}
           onChange={switchThemeColor}
           color="#4c4c4c"
         />
-            DARK
-          </div>
+          DARK
+      </div>
+      <div className="menu--social-box">
+        <SocialBox
+          isMenu
+          isDark={isDark}
+          direction="column"
+        />
+      </div>
     </StyledMenu>
   );
 };

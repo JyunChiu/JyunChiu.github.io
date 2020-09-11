@@ -20,7 +20,7 @@ export const FONT_FAMILY = {
 export const FONT_SIZE = {
   WEB: {
     SMALL: '0.8rem',
-    BASE: '0.95rem',
+    BASE: '0.8rem',
     TITLE: '2rem',
   },
   MOB: {

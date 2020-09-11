@@ -11,11 +11,22 @@ import { PROJECTS_INFO } from './ProtfolioConsts';
 const Div = styled.div`
   background: ${props => props.isDark ? '#2f2f2f' : '#FFFFFF'};
   color: ${props => props.isDark ? COLORS.WHITE : COLORS.BLACK};
-  /* min-height: 100vh; */
+  min-height: 100vh;
   padding: 5rem 8% 6rem;
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
+  align-items: flex-start;
+  /* background: blue; */
+
+  .project-box{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 2rem 0rem;
+    width: 100%;
+    /* align-items: center; */
+    /* background: red; */
+  }
   .projects{
     width: 45%
   }
@@ -47,15 +58,17 @@ const Protfolio = (props) => {
 
   return (
     <Div isDark={isDark} >
-      {PROJECTS_INFO.map((item, index) => (
-        <div className="projects">
-          <Cover
-            isDark={isDark}
-            item={item}
-            num={index + 1}
-          />
-        </div>
-      ))}
+      <div className='project-box'>
+        {PROJECTS_INFO.map((item, index) => (
+          <div className="projects">
+            <Cover
+              isDark={isDark}
+              item={item}
+              num={index + 1}
+            />
+          </div>
+        ))}
+      </div>
     </Div>
   );
 };

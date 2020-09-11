@@ -6,19 +6,19 @@ import ScrollToTop from "react-scroll-up";
 import * as CommonActions from '../../redux/CommonActions';
 import NavBar from '../../components/NavBar';
 import Footer from '../../components/Footer';
-import { COLORS } from '../../styles/_variables';
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { COLORS, RWD_SIZE } from '../../styles/_variables';
+import SocialBox from '../../components/SocialBox';
 
 
 
 const Div = styled.div`
   position: relative;
 
-  .icon-box{
+  .social-box{
     display: flex;
     flex-direction: column;
     position: fixed;
-    bottom: 12rem;
+    bottom: 5rem;
     left: 3rem;
   }
 
@@ -42,6 +42,12 @@ const Div = styled.div`
     }
   }
 
+  @media ${RWD_SIZE.S} {
+    .social-box{
+      display:none;
+    }
+  }
+
 `
 
 const App = (props) => {
@@ -50,7 +56,7 @@ const App = (props) => {
     switchThemeColor
   } = props;
 
-  console.log('eee', isDark)
+
   return (
     <Div isDark={isDark}>
       <NavBar
@@ -63,16 +69,18 @@ const App = (props) => {
       <Footer
         isDark={isDark}
       />
-      <div className="icon-box">
-        <FaFacebookF />
-        <FaLinkedinIn />
+      <div className="social-box">
+        <SocialBox
+          isDark={isDark}
+          direction="column"
+        />
       </div>
 
       <ScrollToTop
         showUnder={80}
         style={{
-          bottom: 80,
-          right: 50
+          bottom: window.innerWidth > 500 ? 60 : 50,
+          right: window.innerWidth > 500 ? 80 : 20
         }}
       >
         <div className="scroll-up-btn">

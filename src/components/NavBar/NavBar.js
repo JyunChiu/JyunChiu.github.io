@@ -88,7 +88,7 @@ const StyledNavLink = styled(NavLink)`
     opacity: .8;
   }
 
-  @media (max-width: 500px) {
+  @media ${RWD_SIZE.S} {
     margin: 0rem 1rem 0rem;
     font-size: ${FONT_SIZE.MOB.BASE};
   }

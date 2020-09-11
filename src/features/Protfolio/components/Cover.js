@@ -18,6 +18,7 @@ const StyledNavLink = styled(NavLink)`
   letter-spacing: 2px;
 
   &:hover{
+    opacity: 0.8;
     transform: translateY(5px);
     box-shadow: 0px 4px 6px -1px ${props => props.isDark ? props.bc : '#c7c7c7'};
     transition: .5s ease all;
@@ -30,11 +31,10 @@ const StyledNavLink = styled(NavLink)`
 
   }
 
-  .style-box{
+  .wrapper{
     display: flex;
     height: 100%;
     width: 85%;
-    background: wheat;
   }
 
   .title{
@@ -79,7 +79,7 @@ const StyledNavLink = styled(NavLink)`
     .number{
       width: 12%;
     }
-    .style-box{
+    .wrapper{
       width: 88%;
     }
     .title{
@@ -97,29 +97,28 @@ const StyledNavLink = styled(NavLink)`
   }
 
   @media ${RWD_SIZE.XS} {
-    height: 16rem;
-    padding: 1rem 1.2rem;
+    height: 15rem;
+    padding: 2rem;
     align-items:space-around;
     .number{
       font-size: 2.8rem;
       width: 15%;
     }
-    .style-box{
+    .wrapper{
       flex-direction: column;
       width: 85%;
     }
     .title{
       text-align: initial;
       margin: 0rem 0rem 1rem;
-      /* width: 60%; */
+      width: auto;
       height: 30%;
       font-size: ${FONT_SIZE.MOB.TITLE};
-      padding: 2rem 1rem 1rem;
+      padding: 1.5rem 1rem 1rem;
       line-height: 2.5rem;
     }
     .info{
-      /* width: 100%; */
-      background: lightblue;
+      width: auto;
       margin: 0rem 0.6rem;
       &--year{
         margin: 0.2rem 0;
@@ -145,7 +144,7 @@ const Cover = (props) => {
   return (
     <StyledNavLink to={path} bc={bc} isDark={isDark}>
       <div className='number'>{num}</div>
-      <div className='style-box'>
+      <div className='wrapper'>
         <div className='title'>{title}</div>
         <div className='info'>
           <div className='info--year'>{year}</div>
