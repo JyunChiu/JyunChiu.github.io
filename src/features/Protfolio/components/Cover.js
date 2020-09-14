@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { COLORS, FONT_SIZE, FONT_FAMILY, RWD_SIZE } from '../../../styles/_variables'
-
 
 const StyledNavLink = styled(NavLink)`
   display: flex;
@@ -16,6 +15,7 @@ const StyledNavLink = styled(NavLink)`
   box-shadow: 0px 5px 16px -1px ${props => props.isDark ? props.bc : '#c7c7c7'};
   border-radius: 5px;
   letter-spacing: 2px;
+  position: relative;
 
   &:hover{
     opacity: 0.8;
@@ -39,7 +39,7 @@ const StyledNavLink = styled(NavLink)`
 
   .title{
     font-family: ${FONT_FAMILY.PROJECT_NO};
-    font-size: ${FONT_SIZE.WEB.TITLE};
+    font-size: 2rem;
     background: ${props => props.bc};
     margin: 0.6rem 2rem 0 0rem;
     padding: 2.8rem 1rem 1rem 2rem;
@@ -57,15 +57,16 @@ const StyledNavLink = styled(NavLink)`
     width: 55%;
     &--year{
       margin: 0 0 0.5rem;
-      font-size: ${FONT_SIZE.WEB.SMALL};
+      font-size: 0.8rem;
       opacity: 0.4;
     }
     &--desc{
       opacity: 0.75;
-      font-size: ${FONT_SIZE.WEB.BASE};
+      font-size: 0.8rem;
       letter-spacing: 1px;
       line-height: 24px;
       word-break: break-word;
+      white-space: pre-line;
     }
   }
 
@@ -113,7 +114,7 @@ const StyledNavLink = styled(NavLink)`
       margin: 0rem 0rem 1rem;
       width: auto;
       height: 30%;
-      font-size: ${FONT_SIZE.MOB.TITLE};
+      font-size: 1.5rem;
       padding: 1.5rem 1rem 1rem;
       line-height: 2.5rem;
     }
@@ -122,10 +123,6 @@ const StyledNavLink = styled(NavLink)`
       margin: 0rem 0.6rem;
       &--year{
         margin: 0.2rem 0;
-        font-size: ${FONT_SIZE.MOB.BASE};
-      }
-      &--desc{
-        font-size: ${FONT_SIZE.MOB.BASE};
       }
     }
   }

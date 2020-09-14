@@ -7,6 +7,7 @@
 export const COLORS = {
   BLACK: '#333333',
   WHITE: '#f9f9f9',
+  LIGHT_GRAY: '#acbac1',
   GRAY: '#7f939c',
   SHADOW_GRAY: 'b7b7b7',
 }
@@ -20,8 +21,8 @@ export const FONT_FAMILY = {
 export const FONT_SIZE = {
   WEB: {
     SMALL: '0.8rem',
-    BASE: '0.8rem',
-    TITLE: '2rem',
+    BASE: '0.9rem',
+    TITLE: '1.8rem',
   },
   MOB: {
     BASE: '0.8rem',

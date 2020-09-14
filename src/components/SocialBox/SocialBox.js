@@ -56,7 +56,7 @@ const SocialBox = (props) => {
   );
 }
 
-SocialBox.SocialBox = {
+SocialBox.defaultProps = {
   isMenu: false,
   direction: 'row',
 }

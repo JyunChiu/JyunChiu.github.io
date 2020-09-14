@@ -22,6 +22,11 @@ const Routes = () => (
         path="/protfolio"
         component={loadable(() => import(/* webpackChunkName: "About" */ '../features/Protfolio'))}
       />
+      <Route
+        exact
+        path="/protfolio/rebase"
+        component={loadable(() => import(/* webpackChunkName: "About" */ '../features/Projects/Rebas'))}
+      />
     </Switch>
   </App>
 );

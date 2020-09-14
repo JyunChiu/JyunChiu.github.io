@@ -1,22 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { compose } from 'recompose';
 import * as ProtfolioActions from './ProtfolioActions';
-import { COLORS, RWD_SIZE } from '../../styles/_variables';
+import * as Mixins from '../../styles/_mixins';
+import { RWD_SIZE } from '../../styles/_variables';
 import Cover from './components/Cover';
 import { PROJECTS_INFO } from './ProtfolioConsts';
 
 
 const Div = styled.div`
-  background: ${props => props.isDark ? '#2f2f2f' : '#FFFFFF'};
-  color: ${props => props.isDark ? COLORS.WHITE : COLORS.BLACK};
-  min-height: 100vh;
-  padding: 5rem 8% 6rem;
+  ${props => Mixins.bgBase(props.isDark)};
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  /* background: blue; */
 
   .project-box{
     display: flex;
@@ -24,8 +21,6 @@ const Div = styled.div`
     justify-content: center;
     padding: 2rem 0rem;
     width: 100%;
-    /* align-items: center; */
-    /* background: red; */
   }
   .projects{
     width: 45%
