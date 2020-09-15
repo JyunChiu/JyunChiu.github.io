@@ -70,7 +70,7 @@ const Portfolio = (props) => {
 
 const mapStateToProps = (state) => ({
   isDark: state.common.isDark,
-  test: state.protfolio.test,
+  test: state.portfolio.test,
 });
 
 const mapDispatchToProps = {
