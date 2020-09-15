@@ -1,7 +1,7 @@
 export const NAV_BAR_INFO = [
   {
-    label: 'PROTFOLIO',
-    path: '/protfolio'
+    label: 'PORTFOLIO',
+    path: '/portfolio'
   },
   {
     label: 'ABOUT',

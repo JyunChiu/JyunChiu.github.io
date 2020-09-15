@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { COLORS } from '../../styles/_variables';
+import { COLORS, RWD_SIZE } from '../../styles/_variables';
 import * as Mixins from '../../styles/_mixins';
 
 const Div = styled.div`
   display: flex;
-  flex-direction: ${props => props.direction};
   align-items: flex-end;
   .tag-box{
     margin: 0 0.5rem;
@@ -18,6 +17,19 @@ const Div = styled.div`
       background: ${COLORS.LIGHT_GRAY};
       margin: 0 0.5rem;
       font-size: 0.8rem;
+    }
+  }
+
+  @media ${RWD_SIZE.XS} {
+   flex-direction: column;
+   align-items: center;
+   .tag-box{
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
+     .tag{
+      margin: 0.5rem 0 0;
+     }
     }
   }
 `

@@ -19,13 +19,18 @@ const Routes = () => (
       />
       <Route
         exact
-        path="/protfolio"
-        component={loadable(() => import(/* webpackChunkName: "About" */ '../features/Protfolio'))}
+        path="/portfolio"
+        component={loadable(() => import(/* webpackChunkName: "About" */ '../features/Portfolio'))}
       />
       <Route
         exact
-        path="/protfolio/rebase"
+        path="/portfolio/rebase"
         component={loadable(() => import(/* webpackChunkName: "About" */ '../features/Projects/Rebas'))}
+      />
+      <Route
+        exact
+        path="/portfolio/dailyPractice"
+        component={loadable(() => import(/* webpackChunkName: "About" */ '../features/Projects/DailyPractice'))}
       />
     </Switch>
   </App>

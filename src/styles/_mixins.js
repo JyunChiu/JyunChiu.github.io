@@ -9,7 +9,7 @@ export const bgBase = (isDark) => `
 `;
 
 export const imgShadow = (isDark) => `
-  box-shadow: 0px 4px 12px 2px ${isDark ? '#598683' : '#d0d0d0'};`
+  box-shadow: 0px 4px 12px 2px ${isDark ? '#000000ad' : '#d0d0d0'};`
 
 
 export default {

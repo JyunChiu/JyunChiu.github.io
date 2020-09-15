@@ -72,7 +72,7 @@ const StyledNavLink = styled(NavLink)`
   color: ${props => props.isDark ? COLORS.WHITE : COLORS.BLACK};
   opacity: 0.4;
 
-  &.active{
+  &.current{
     opacity: 1;
     &:after {
       content: '';
@@ -133,6 +133,7 @@ const NavBar = (props) => {
             <StyledNavLink
               isDark={isDark}
               to={item.path}
+              activeClassName="current"
             >
               {item.label}
             </StyledNavLink>
