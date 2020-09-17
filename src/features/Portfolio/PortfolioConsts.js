@@ -1,8 +1,8 @@
 export const PROJECTS_INFO = [
   {
-    title: 'Rebase',
+    title: 'Rebas',
     desc: 'Official Site\nResponsive Design',
-    path: '/portfolio/rebase',
+    path: '/portfolio/rebas',
     year: '2020',
     bc: '#d2adad',
     titleSize: '2rem'
@@ -16,16 +16,16 @@ export const PROJECTS_INFO = [
   },
   {
     title: 'Daily Practice',
-    desc: 'Redesign',
+    desc: 'UI/UX Practice\nCoding Practice',
     path: '/portfolio/dailyPractice',
-    year: '2017 - 2020',
+    year: '2017 - present',
     bc: '#679fb5',
   },
   {
     title: 'Others',
     desc: 'Some things I made in daily',
     path: '/portfolio/3',
-    year: '2017 - 2020',
+    year: '2017 - present',
     bc: '#e2d887',
     titleSize: '2rem'
   },

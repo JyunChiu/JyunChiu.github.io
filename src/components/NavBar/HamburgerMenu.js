@@ -4,6 +4,7 @@ import { NAV_BAR_INFO } from './NavBarConsts';
 import { COLORS, FONT_FAMILY, RWD_SIZE } from '../../styles/_variables';
 import Switch from '../../components/Switch';
 import SocialBox from '../../components/SocialBox';
+import { history } from '../../store';
 
 const StyledMenu = styled.div`
   display: none;
@@ -38,6 +39,11 @@ const StyledMenu = styled.div`
       color: ${props => props.isDark ? COLORS.BLACK : COLORS.WHITE};
       margin: 1rem 0 2.5rem;
       box-shadow: 3px 4px 8px 0px #6F6F6F;
+      cursor: pointer;
+      &:hover{
+        box-shadow: 3px 2px 4px 0px #6F6F6F;
+        transition: .5s ease all;
+      }
     }
 
     .switch-box{
@@ -70,7 +76,7 @@ const HamburgerMenu = (props) => {
   const { isHambugerOpen, isDark, switchThemeColor } = props;
   return (
     <StyledMenu isOpen={isHambugerOpen} isDark={isDark}>
-      <div className="site-name">
+      <div className="site-name" onClick={() => history.push('/portfolio')}>
         Jin Chiu
       </div>
       <div className="switch-box">

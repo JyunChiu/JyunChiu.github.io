@@ -60,14 +60,13 @@ const StyledNavLink = styled(NavLink)`
       margin: 0 0 0.5rem;
       font-size: 0.8rem;
       opacity: 0.4;
-      white-space: pre-line;
     }
     &--desc{
       opacity: 0.75;
       font-size: 0.8rem;
       letter-spacing: 1px;
       line-height: 24px;
-      /* word-break: break-word; */
+      word-break: break-word;
       white-space: pre-line;
     }
   }

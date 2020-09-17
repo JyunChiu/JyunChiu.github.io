@@ -14,6 +14,11 @@ const Routes = () => (
     <Switch>
       <Route
         exact
+        path="/"
+        component={loadable(() => import(/* webpackChunkName: "About" */ '../features/Portfolio'))}
+      />
+      <Route
+        exact
         path="/about"
         component={loadable(() => import(/* webpackChunkName: "About" */ '../features/About'))}
       />
@@ -24,7 +29,7 @@ const Routes = () => (
       />
       <Route
         exact
-        path="/portfolio/rebase"
+        path="/portfolio/rebas"
         component={loadable(() => import(/* webpackChunkName: "About" */ '../features/Projects/Rebas'))}
       />
       <Route

@@ -6,6 +6,7 @@ export const bgBase = (isDark) => `
   color: ${isDark ? COLORS.WHITE : COLORS.BLACK};
   min-height: 100vh;
   padding: 5rem 8% 6rem;
+  transition: .3s ease all;
 `;
 
 export const imgShadow = (isDark) => `

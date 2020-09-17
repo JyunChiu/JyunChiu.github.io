@@ -8,6 +8,7 @@ import HamburgerIcon from './HamburgerIcon';
 import { COLORS, FONT_FAMILY, FONT_SIZE } from '../../styles/_variables';
 import Switch from '../../components/Switch';
 import { RWD_SIZE } from '../../styles/_variables';
+import { history } from '../../store';
 
 
 const StyledNavBar = styled.nav`
@@ -31,6 +32,11 @@ const StyledNavBar = styled.nav`
       color: ${props => props.isDark ? COLORS.BLACK : COLORS.WHITE};
       margin-right: 2rem;
       box-shadow: 3px 4px 8px 0px ${props => props.isDark ? '#598683' : '#6F6F6F'};
+      cursor: pointer;
+      &:hover{
+        box-shadow: 3px 2px 4px 0px ${props => props.isDark ? '#598683' : '#6F6F6F'};
+        transition: .5s ease all;
+      }
     }
   }
 
@@ -115,7 +121,7 @@ const NavBar = (props) => {
     <Fragment>
       <StyledNavBar isDark={isDark}>
         <div className="left-box">
-          <div className="site-name">
+          <div className="site-name" onClick={() => history.push('/portfolio')}>
             Jin Chiu
           </div>
           <div className="switch-box">
