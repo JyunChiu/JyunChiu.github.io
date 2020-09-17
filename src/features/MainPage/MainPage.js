@@ -5,7 +5,7 @@ import BarPage from '../D3Practice/BarPage';
 import LinePage from '../D3Practice/LinePage';
 import ProjectPage from '../D3Practice/ProjectPage';
 import { DATA_TYPE_NAME, SVG_CONTAINER_SIZE, getRandomDate, getRandomNum } from './Const';
-import Button from '../components/Button';
+import Button from '../../components/Button';
 
 const Div = styled.div`
   display: flex;
@@ -13,8 +13,9 @@ const Div = styled.div`
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(50deg, #48284c 0%, #233e58 100%);
+  /* background: linear-gradient(50deg, #48284c 0%, #233e58 100%); */
   /* background: linear-gradient(100deg, rgb(182, 40, 111) 50%, #ac2066 0); */
+  background: linear-gradient(10deg,#585555 -39%,#2d4c6b 100%);
   padding: 5rem 0rem;
   position: relative;
 
@@ -31,7 +32,7 @@ const Div = styled.div`
       letter-spacing: 2px;
       text-align: center;
       &.--active {
-        border-bottom: solid 4px rgb(152, 136, 40, 1);
+        border-bottom: solid 4px rgb(239 216 83);
       }
 
       &:hover{
@@ -85,7 +86,8 @@ const Div = styled.div`
 `;
 
 
-const dataType = ['LINE', 'BAR', 'PIE', 'PROJECT'];
+// const dataType = ['LINE', 'BAR', 'PIE', 'PROJECT'];
+const dataType = ['PIE', 'LINE'];
 
 const MainPage = (props) => {
   const [typeName, setTypeName] = useState(DATA_TYPE_NAME.PIE);
@@ -101,30 +103,30 @@ const MainPage = (props) => {
     outerRadius: SVG_CONTAINER_SIZE.OUTER_RADIUS,
   }
 
-  useEffect(()=>{ 
+  useEffect(() => {
     getNewData();
   }, [])
 
   function updateData(count) {
-    if(count === 1 && dataCount < 12){
+    if (count === 1 && dataCount < 12) {
       let a = getRandomNum();
       let b = getRandomNum();
-      let max = a > b? a : b;
-      let min = a > b? b : a;
+      let max = a > b ? a : b;
+      let min = a > b ? b : a;
       const newItem = {
         date: getRandomDate(new Date(2020, 0, 1), new Date(2020, 11, 31)),
         max,
         min,
       }
-      const newData = [...data, newItem].sort(function(a, b) {
+      const newData = [...data, newItem].sort(function (a, b) {
         return a.date - b.date;
-    })
+      })
       setData(newData);
       setDataCount(prevState => prevState + 1);
 
     }
-    if(count === -1 && dataCount > 6){
-      const newData = data.splice(0, data.length-1);
+    if (count === -1 && dataCount > 6) {
+      const newData = data.splice(0, data.length - 1);
       setData(newData);
       setDataCount(prevState => prevState - 1);
     }
@@ -134,36 +136,36 @@ const MainPage = (props) => {
     const newData = [...Array(dataCount).keys()].map(item => {
       let a = getRandomNum();
       let b = getRandomNum();
-      let max = a > b? a : b;
-      let min = a > b? b : a;
+      let max = a > b ? a : b;
+      let min = a > b ? b : a;
       return {
         date: getRandomDate(new Date(2020, 0, 1), new Date(2020, 11, 31)),
         max,
         min,
       }
     })
-    .sort(function(a, b) {
-      return a.date - b.date;
-  })
+      .sort(function (a, b) {
+        return a.date - b.date;
+      })
     setData(newData);
   }
 
-  function getVisuallData(){
-    switch(typeName){
+  function getVisuallData() {
+    switch (typeName) {
       case DATA_TYPE_NAME.PIE:
-        return <PiePage {...extendProps}/>
-      case DATA_TYPE_NAME.BAR:
-          return <BarPage {...extendProps}/> 
+        return <PiePage {...extendProps} />
+      // case DATA_TYPE_NAME.BAR:
+      //   return <BarPage {...extendProps} />
+      // case DATA_TYPE_NAME.LINE:
+      //   return <LinePage {...extendProps} />
       case DATA_TYPE_NAME.LINE:
-          return <LinePage {...extendProps}/>
-      case DATA_TYPE_NAME.PROJECT:
-          return <ProjectPage {...extendProps}/>
+        return <ProjectPage {...extendProps} />
       default:
         return;
     }
   }
 
-  function handleSwitch(name){
+  function handleSwitch(name) {
     // console.log('type name ::::::', name)
     setTypeName(name)
   }
@@ -172,10 +174,10 @@ const MainPage = (props) => {
     <Div>
       <div className="upper-bar">
         {dataType.map(item => (
-          <div 
+          <div
             key={item}
-            className={typeName===DATA_TYPE_NAME[item]? "button --active" : "button"}
-            onClick={()=> handleSwitch(DATA_TYPE_NAME[item])}
+            className={typeName === DATA_TYPE_NAME[item] ? "button --active" : "button"}
+            onClick={() => handleSwitch(DATA_TYPE_NAME[item])}
           >
             {item.toUpperCase()}
           </div>
@@ -184,25 +186,25 @@ const MainPage = (props) => {
       <div className="content-box">
         {getVisuallData()}
       </div>
-      {typeName !== DATA_TYPE_NAME.PROJECT ?
+      {typeName === DATA_TYPE_NAME.PIE ?
         < div className="bottom-zone">
-        <Button 
-          onClick={getNewData}>
-          Reset
+          <Button
+            onClick={getNewData}>
+            Reset
         </Button>
-        <Button 
-          onClick={()=>updateData(1)}
-          disabled={dataCount >= 12}
-        >
-          Add Item
+          <Button
+            onClick={() => updateData(1)}
+            disabled={dataCount >= 12}
+          >
+            Add Item
         </Button>
-        <Button 
-          onClick={()=>updateData(-1)}
-          disabled={dataCount <= 6}
-        >
-          Remove Item
+          <Button
+            onClick={() => updateData(-1)}
+            disabled={dataCount <= 6}
+          >
+            Remove Item
         </Button>
-      </ div> : null}
+        </ div> : null}
     </Div>
   );
 };

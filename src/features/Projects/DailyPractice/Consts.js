@@ -7,13 +7,27 @@ import errorPage from './Screenshot/errorPage.png';
 import musicPlayer from './Screenshot/musicPlayer.png';
 import boo from './Screenshot/boo.mp4';
 import cinemaApp from './Screenshot/cinemaApp.mp4';
+import d3Practice from './Screenshot/d3Practice.mov'
 
 export const MENU = [
+  {
+    label: 'D3.js Practice',
+    id: 'd3Practice',
+    videoName: [d3Practice],
+    videoSize: '100%',
+    year: 'Coding | 2020',
+    desc: [
+      {
+        title: 'WORK',
+        content: 'D3、React、Styled-Components',
+      },
+    ],
+  },
   {
     label: 'Music Player',
     id: 'musicPlayer',
     imgName: [musicPlayer],
-    year: 2018,
+    year: 'Design | 2018',
     desc: [
       {
         title: 'WORK',
@@ -29,7 +43,7 @@ export const MENU = [
     label: 'Error Page',
     id: 'errorPage',
     imgName: [errorPage],
-    year: 2018,
+    year: 'Design | 2018',
     desc: [
       {
         title: 'WORK',
@@ -45,7 +59,7 @@ export const MENU = [
     label: 'App Icon',
     id: 'appicon',
     imgName: [appIcon],
-    year: 2018,
+    year: 'Design | 2018',
     desc: [
       {
         title: 'WORK',
@@ -61,7 +75,8 @@ export const MENU = [
     label: 'Car App',
     id: 'carApp',
     videoName: [boo],
-    year: 2018,
+    videoSize: '50%',
+    year: 'Design | 2018',
     desc: [
       {
         title: 'WORK',
@@ -77,7 +92,8 @@ export const MENU = [
     label: 'Cinema App',
     id: 'cinemaApp',
     videoName: [cinemaApp],
-    year: 2018,
+    videoSize: '50%',
+    year: 'Design | 2018',
     desc: [
       {
         title: 'WORK',
@@ -93,7 +109,7 @@ export const MENU = [
     label: 'Credit Card Checkout',
     id: 'creditCardCheckout',
     imgName: [creditCardCheckout2],
-    year: 2017,
+    year: 'Design | 2017',
     desc: [
       {
         title: 'WORK',
@@ -109,7 +125,7 @@ export const MENU = [
     label: 'Sign In Page #1',
     id: 'signInPage1',
     imgName: [sigininPage2],
-    year: 2017,
+    year: 'Design | 2017',
     desc: [
       {
         title: 'WORK',
@@ -125,7 +141,7 @@ export const MENU = [
     label: 'Sign In Page #2',
     id: 'signInPage2',
     imgName: [sigininPage1],
-    year: 2017,
+    year: 'Design | 2017',
     desc: [
       {
         title: 'WORK',
@@ -141,7 +157,7 @@ export const MENU = [
     label: 'Calculator',
     id: 'calculator',
     imgName: [calculator],
-    year: 2017,
+    year: 'Design | 2017',
     desc: [
       {
         title: 'WORK',

@@ -5,7 +5,7 @@ import { FOOTER_BUTTONS } from './FooterConsts';
 
 const StyledFooter = styled.footer`
   display: flex;
-  background: ${props => props.isDark ? '#2f2f2f' : '#FFFFFF'};
+  background: ${props => props.isDark ? '#2f2f2f' : '#f9f9f9'};
   color: ${props => props.isDark ? COLORS.WHITE : COLORS.BLACK};
   justify-content: center;
   letter-spacing: 3px;

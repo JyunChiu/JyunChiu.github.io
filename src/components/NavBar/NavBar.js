@@ -17,7 +17,7 @@ const StyledNavBar = styled.nav`
   align-items: flex-end;
   padding: 1.2rem 8%;
   letter-spacing: 2px;
-  background: ${props => props.isDark ? COLORS.BLACK : COLORS.WHITE};
+  background: ${props => props.isDark ? COLORS.BLACK : '#FFFFFF'};
   color: ${props => props.isDark ? COLORS.WHITE : COLORS.BLACK};
 
   .left-box {

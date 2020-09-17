@@ -2,7 +2,7 @@ import { COLORS } from './_variables';
 
 // Mixin 
 export const bgBase = (isDark) => `
-  background: ${isDark ? '#2f2f2f' : '#FFFFFF'};
+  background: ${isDark ? '#2f2f2f' : '#f9f9f9'};
   color: ${isDark ? COLORS.WHITE : COLORS.BLACK};
   min-height: 100vh;
   padding: 5rem 8% 6rem;

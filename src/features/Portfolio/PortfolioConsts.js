@@ -10,7 +10,7 @@ export const PROJECTS_INFO = [
   {
     title: 'Portfolio Website',
     desc: 'Github Page\nPersonal Online Portfolio\nResponsive Design',
-    path: '/portfolio/2',
+    path: '/portfolio/myWeb',
     year: '2020',
     bc: '#95aba9',
   },

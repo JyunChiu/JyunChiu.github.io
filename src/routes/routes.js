@@ -34,6 +34,11 @@ const Routes = () => (
       />
       <Route
         exact
+        path="/portfolio/myWeb"
+        component={loadable(() => import(/* webpackChunkName: "About" */ '../features/Projects/MyWeb'))}
+      />
+      <Route
+        exact
         path="/portfolio/dailyPractice"
         component={loadable(() => import(/* webpackChunkName: "About" */ '../features/Projects/DailyPractice'))}
       />

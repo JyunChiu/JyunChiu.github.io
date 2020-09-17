@@ -1,7 +1,7 @@
 import React from 'react';
 import * as d3 from "d3";
 import styled from 'styled-components';
-import TimeIcon from '../../Icon/time.svg'
+import TimeIcon from '../../../Icon/time.svg'
 
 const Div = styled.div`
   display: flex;
@@ -32,51 +32,51 @@ const Div = styled.div`
 `;
 
 const Legend = styled.div`
-  width: ${({legendSize}) => legendSize};
-  height: ${({legendSize}) => legendSize};
-  background-color: ${({color, defaultColor}) => !!color? color : defaultColor};
-  border-radius: ${({round})=>round? '10rem': '3px'};
+  width: ${({ legendSize }) => legendSize};
+  height: ${({ legendSize }) => legendSize};
+  background-color: ${({ color, defaultColor }) => !!color ? color : defaultColor};
+  border-radius: ${({ round }) => round ? '10rem' : '3px'};
 `;
 
 const LegendInfo = (props) => {
-  const { 
-    data, 
-    focusValue, 
-    colors, 
-    xUnit, 
-    yUnit, 
-    defaultColor, 
-    legendSize, 
+  const {
+    data,
+    focusValue,
+    colors,
+    xUnit,
+    yUnit,
+    defaultColor,
+    legendSize,
     findMinAndMax,
     width, height, margin
-   } = props;
-  
+  } = props;
+
   function getYValue(i, val) {
-    let xDomain = findMinAndMax('sec', data.map(d=> d.grade));
+    let xDomain = findMinAndMax('sec', data.map(d => d.grade));
     let xScale = d3.scaleLinear()
-        .domain(xDomain)
-        .range([margin.left, width-margin.right]);
+      .domain(xDomain)
+      .range([margin.left, width - margin.right]);
     const xId = xScale(val);
-   
-    let yDomain = findMinAndMax('meter', data.map(d=> d.grade));
+
+    let yDomain = findMinAndMax('meter', data.map(d => d.grade));
     let yScale = d3.scaleLinear()
-        .domain(yDomain)
-        .range([height - margin.bottom, margin.top]);
+      .domain(yDomain)
+      .range([height - margin.bottom, margin.top]);
     const mainLines = document.getElementsByClassName('main-line');
     let beginning = 0;
     let end = mainLines[i].getTotalLength();
     let obj = null;
 
-    while (true){
+    while (true) {
       let target = Math.floor((beginning + end) / 2);
       obj = mainLines[i].getPointAtLength(target);
       if ((target === end || target === beginning) && obj.x !== xId) {
         break;
       }
-      if (obj.x > xId){
+      if (obj.x > xId) {
         end = target
       }
-      else if (obj.x < xId){
+      else if (obj.x < xId) {
         beginning = target
       }
       else break; //position found
@@ -89,25 +89,25 @@ const LegendInfo = (props) => {
 
   return (
     <Div legendSize={legendSize}>
-      <div className="box"> 
-        <img src={TimeIcon} className="time-icon" alt=""/>
-        {focusValue || focusValue === 0 ? <div className="text"> {focusValue} {xUnit} </div> : null} 
+      <div className="box">
+        <img src={TimeIcon} className="time-icon" alt="" />
+        {focusValue || focusValue === 0 ? <div className="text"> {focusValue} {xUnit} </div> : null}
       </div>
       {
-        data && data.map((d,i) => {
-          const yValue = focusValue || focusValue === 0? getYValue(i, focusValue) : null;
-          const legendColor = colors[i] 
+        data && data.map((d, i) => {
+          const yValue = focusValue || focusValue === 0 ? getYValue(i, focusValue) : null;
+          const legendColor = colors[i]
           return (
-            <div className="box"> 
-            <Legend
-              round
-              color={legendColor} 
-              defaultColor={defaultColor} 
-              legendSize={legendSize} 
-            />
-            <div className="text"> {d.name} </div>
-            {yValue || yValue === 0 ? <div className="y-value"> {yValue} {yUnit} </div>  : <div />}
-          </div>)
+            <div className="box">
+              <Legend
+                round
+                color={legendColor}
+                defaultColor={defaultColor}
+                legendSize={legendSize}
+              />
+              <div className="text"> {d.name} </div>
+              {yValue || yValue === 0 ? <div className="y-value"> {yValue} {yUnit} </div> : <div />}
+            </div>)
         })
       }
     </Div>
@@ -118,7 +118,7 @@ LegendInfo.defaultProps = {
   data: null,
   focusValue: '',
   colors: [],
-  xUnit: '', 
+  xUnit: '',
   yUnit: '',
   defaultColor: '#FFF',
   legendSize: '1.1rem',

@@ -101,7 +101,7 @@ const StyledWrapper = styled.div`
   .desc{
     display: flex;
     flex-direction: column;
-    margin: 0 0 0 6%;
+    margin: 0.6rem 0 0 6%;
     width: 35%;
     &--year{
       width: auto;
@@ -127,13 +127,8 @@ const StyledWrapper = styled.div`
   .img-box{
     display: flex;
     flex-direction: column;
-    width: 55%;
+    width: 60%;
     align-items: center;
-    &.video{
-      width: 40%;
-      align-items: flex-start;
-      justify-self: center;
-    }
     img{
       width: 100%;
       &:not(:first-child){
@@ -165,10 +160,6 @@ const StyledWrapper = styled.div`
     }
     .img-box{
       width: 95%;
-      &.video{
-        width: 75%;
-        align-items: center;
-      }
     }
     .desc{
       width: auto;
@@ -176,7 +167,7 @@ const StyledWrapper = styled.div`
       align-self: flex-start;
       align-items: flex-start;
       flex-wrap: wrap;
-      margin: 2.5rem 0 0 1rem;
+      margin: 1.5rem 0 0 0.6rem;
       &--year{
         width: 100%;
         margin: 0;
@@ -228,11 +219,11 @@ const DailyPractice = (props) => {
                 </div>
               }
               {R.has('videoName')(item) &&
-                <div className='img-box video'>
+                <div className='img-box'>
                   {item.videoName.map(video => (
                     <ReactPlayer
                       url={video}
-                      width="88%"
+                      width={item.videoSize}
                       height="auto"
                       controls={true}
                     />))}
