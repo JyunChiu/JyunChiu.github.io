@@ -4,8 +4,8 @@ import { COLORS } from './_variables';
 export const bgBase = (isDark) => `
   background: ${isDark ? '#2f2f2f' : '#f9f9f9'};
   color: ${isDark ? COLORS.WHITE : COLORS.BLACK};
-  min-height: 72vh;
-  padding: 5rem 8% 3rem;
+  min-height: 75vh;
+  padding: 2rem 8% 1rem;
   transition: .3s ease all;
 `;
 
