@@ -6,6 +6,8 @@ import * as Mixins from '../../styles/_mixins';
 const Div = styled.div`
   display: flex;
   align-items: flex-end;
+  .label{
+  }
   .tag-box{
     margin: 0 0.5rem;
     display: flex;
@@ -42,7 +44,7 @@ const TagSection = (props) => {
 
   return (
     <Div isDark={isDark}>
-      <div className='label'>{label}</div>
+      {label && <div className='label'>{label}</div>}
       <div className='tag-box'>
         {tags.map(item => <div className='tag'>{item}</div>)}
       </div>

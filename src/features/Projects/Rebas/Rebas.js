@@ -26,7 +26,7 @@ const Div = styled.div`
       opacity: 0.7;
       letter-spacing: 2px;
       font-size: ${FONT_SIZE.WEB.TITLE};
-      margin: 0 0 1.5rem;
+      margin: 0 0 2rem;
       line-height: 2rem;
     }
     .content{
