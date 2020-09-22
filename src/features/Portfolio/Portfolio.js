@@ -11,15 +11,15 @@ import { PROJECTS_INFO } from './PortfolioConsts';
 
 const Div = styled.div`
   ${props => Mixins.bgBase(props.isDark)};
+  padding: 0rem 8% ;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 
   .project-box{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    padding: 2rem 0rem;
     width: 100%;
   }
   .projects{
@@ -60,6 +60,7 @@ const Portfolio = (props) => {
               isDark={isDark}
               item={item}
               num={index + 1}
+              disabled={item.disabled}
             />
           </div>
         ))}

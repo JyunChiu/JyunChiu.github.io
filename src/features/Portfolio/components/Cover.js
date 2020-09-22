@@ -17,6 +17,13 @@ const StyledNavLink = styled(NavLink)`
   letter-spacing: 2px;
   position: relative;
 
+  &.disabled{
+    box-shadow: 0px 4px 6px -1px ${props => props.isDark ? props.bc : '#c7c7c7'};
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
   &:hover{
     opacity: 0.8;
     transform: translateY(5px);
@@ -135,12 +142,12 @@ const Cover = (props) => {
   const {
     isDark,
     num,
-    item: { title, desc, path, year, bc, titleSize }
+    item: { title, desc, path, year, bc, titleSize, disabled }
   } = props;
 
 
   return (
-    <StyledNavLink to={path} bc={bc} isDark={isDark} titleSize={titleSize}>
+    <StyledNavLink to={path} bc={bc} isDark={isDark} titleSize={titleSize} className={disabled ? 'disabled' : ''}>
       <div className='number'>{num}</div>
       <div className='wrapper'>
         <div className='title'>{title}</div>

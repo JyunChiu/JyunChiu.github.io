@@ -23,11 +23,12 @@ export const PROJECTS_INFO = [
   },
   {
     title: 'Others',
-    desc: 'Some things I made in daily',
-    path: '/portfolio/3',
+    desc: 'Some things I made in daily. \n\n(Building)\nNot ready yet',
+    path: '/portfolio/others',
     year: '2017 - present',
     bc: '#e2d887',
-    titleSize: '2rem'
+    titleSize: '2rem',
+    disabled: true,
   },
 ]
 

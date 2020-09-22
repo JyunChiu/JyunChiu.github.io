@@ -7,9 +7,9 @@ const Div = styled.div`
   display: flex;
   align-items: flex-end;
   .label{
+    margin: 0 0.5rem 0 0;
   }
   .tag-box{
-    margin: 0 0.5rem;
     display: flex;
     .tag{
       box-shadow: 0px 3px 6px 0px ${props => props.isDark ? '#4ea59f' : '#676767'};
@@ -17,8 +17,10 @@ const Div = styled.div`
       border-radius: 5px;
       color: ${props => props.isDark ? COLORS.BLACK : COLORS.WHITE};
       background: ${COLORS.LIGHT_GRAY};
-      margin: 0 0.5rem;
       font-size: 0.8rem;
+    }
+    div:not(:first-child){
+      margin: 0 0.6rem;
     }
   }
 

@@ -39,8 +39,16 @@ const Routes = () => (
       />
       <Route
         exact
+        path="/portfolio/others"
+      // component={loadable(() => import(/* webpackChunkName: "About" */ '../features/Projects/Others'))}
+      />
+      <Route
+        exact
         path="/portfolio/dailyPractice"
         component={loadable(() => import(/* webpackChunkName: "About" */ '../features/Projects/DailyPractice'))}
+      />
+      <Route
+        component={loadable(() => import(/* webpackChunkName: "NotFound" */ '../features/NotFound'))}
       />
     </Switch>
   </App>

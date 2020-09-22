@@ -109,8 +109,8 @@ const Div = styled.div`
     &--M{
       position: absolute;
       width: 25%;
-      right: -8%;
-      bottom: 8%;
+      right: -10%;
+      bottom: 5%;
     }
     &--S{
       position: absolute;

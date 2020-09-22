@@ -16,6 +16,8 @@ export const FONT_FAMILY = {
   SITE_NAME: 'Cinzel',
   PROJECT_NO: 'Playfair Display',
   PROJECT_NAME: 'Playfair Display',
+  ERROR_PAGE_BTN: 'Ubuntu',
+  ERROR_PAGE_NUM: 'Crimson Text',
 }
 
 export const FONT_SIZE = {
