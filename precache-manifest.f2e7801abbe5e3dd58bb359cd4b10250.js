@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f87a0f48e802f0bcfd76de3a38a8c5ba",
+    "revision": "633d41ee0700a902a32aa95119799253",
     "url": "/index.html"
   },
   {
-    "revision": "cf674f8709b174c36abe",
+    "revision": "9cc5acb106c7db085df4",
     "url": "/static/css/main.48659c1d.chunk.css"
   },
   {
@@ -16,28 +16,32 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/4.4d38cb59.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3f9c0fc8518c463c26ba",
-    "url": "/static/js/5.d2feb438.chunk.js"
+    "revision": "9a48a94fe352fb16dff4",
+    "url": "/static/js/5.fae43f90.chunk.js"
   },
   {
     "revision": "81896c98bac7b5b16ab1d3790da5b937",
-    "url": "/static/js/5.d2feb438.chunk.js.LICENSE.txt"
+    "url": "/static/js/5.fae43f90.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "166d703e66355a279e3b",
-    "url": "/static/js/About.10f7f740.chunk.js"
+    "revision": "1ace95048da8713dcc22",
+    "url": "/static/js/About.793d166d.chunk.js"
   },
   {
-    "revision": "10306bb75a5207943777",
-    "url": "/static/js/NotFound.41a2ca3f.chunk.js"
+    "revision": "2b10e23d804ea44c50e4",
+    "url": "/static/js/NotFound.1880c0af.chunk.js"
   },
   {
-    "revision": "cf674f8709b174c36abe",
-    "url": "/static/js/main.ec7fd84b.chunk.js"
+    "revision": "9cc5acb106c7db085df4",
+    "url": "/static/js/main.faaf8af5.chunk.js"
   },
   {
-    "revision": "95bf43c3a37314abcb8a",
-    "url": "/static/js/runtime-main.3b173253.js"
+    "revision": "c568cfd4e25e0b007f0e",
+    "url": "/static/js/runtime-main.9b6974a4.js"
+  },
+  {
+    "revision": "ba436a8fc428b085ff61e967a61230d9",
+    "url": "/static/media/Me.ba436a8f.JPG"
   },
   {
     "revision": "74c794d289614be5bad8c025469dfce7",
@@ -98,6 +102,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "249b804bb1afcaefb92b0cb903b9145b",
     "url": "/static/media/errorPage.249b804b.png"
+  },
+  {
+    "revision": "0bb8faa2476fdcfce171371f9f7cd91e",
+    "url": "/static/media/jin_chiu_cv_en.0bb8faa2.pdf"
   },
   {
     "revision": "0a87fe4c5ec3947a8fd3d26742fd0c13",
