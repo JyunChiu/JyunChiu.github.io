@@ -115,7 +115,7 @@ const NotFound = (props) => {
   const { isDark } = props;
 
   function handleBack() {
-    props.history.goBack()
+    props.history.push('/portfolio')
   }
 
   return (
