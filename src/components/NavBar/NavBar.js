@@ -150,7 +150,10 @@ const NavBar = (props) => {
           ))}
         </div>
       </StyledNavBar>
-      <HamburgerIcon isOpen={isHamMenuOpen} setIsOpen={setHamMenuStatus} />
+      <HamburgerIcon
+        isOpen={isHamMenuOpen}
+        setIsOpen={setHamMenuStatus}
+      />
       <HamburgerMenu
         isDark={isDark}
         switchThemeColor={switchThemeColor}

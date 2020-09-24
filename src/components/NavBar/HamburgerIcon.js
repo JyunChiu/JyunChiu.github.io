@@ -52,9 +52,9 @@ const StyledBurger = styled.button`
 `;
 
 const HamburgerIcon = (props) => {
-  const { isHambugerOpen, setIsHambugerOpen } = props;
+  const { isOpen, setIsOpen } = props;
   return (
-    <StyledBurger isOpen={isHambugerOpen} onClick={() => setIsHambugerOpen(!isHambugerOpen)}>
+    <StyledBurger isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
       <div />
       <div />
       {/* <div /> */}

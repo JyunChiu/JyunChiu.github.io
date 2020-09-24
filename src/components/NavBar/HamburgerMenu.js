@@ -1,10 +1,10 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
 import { NAV_BAR_INFO } from './NavBarConsts';
+import { NavLink } from 'react-router-dom';
 import { COLORS, FONT_FAMILY, RWD_SIZE } from '../../styles/_variables';
 import Switch from '../../components/Switch';
 import SocialBox from '../../components/SocialBox';
-import { history } from '../../store';
 
 const StyledMenu = styled.div`
   display: none;
@@ -30,6 +30,7 @@ const StyledMenu = styled.div`
     backdrop-filter: blur(3px);
 
     .site-name{
+      text-decoration: none;
       width: 5rem;
       font-family: ${FONT_FAMILY.SITE_NAME};
       font-weight: 600;
@@ -73,12 +74,18 @@ const StyledMenu = styled.div`
 `;
 
 const HamburgerMenu = (props) => {
-  const { isHambugerOpen, isDark, switchThemeColor } = props;
+  const { isOpen, isDark, switchThemeColor } = props;
   return (
-    <StyledMenu isOpen={isHambugerOpen} isDark={isDark}>
-      <div className="site-name" onClick={() => history.push('/portfolio')}>
+    <StyledMenu isOpen={isOpen} isDark={isDark}>
+      <NavLink
+        className="site-name"
+        to={{
+          pathname: '/portfolio',
+          state: { isBack: true }
+        }}
+      >
         Jin Chiu
-      </div>
+      </NavLink>
       <div className="switch-box">
         LIGHT
         <Switch
