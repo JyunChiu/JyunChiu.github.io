@@ -6,6 +6,19 @@ import { COLORS, FONT_FAMILY, RWD_SIZE } from '../../styles/_variables';
 import Switch from '../../components/Switch';
 import SocialBox from '../../components/SocialBox';
 
+const BelowDiv = styled.div`
+  display: ${({ isOpen }) => isOpen ? 'unset' : 'none'};
+  width: 100vw;
+  height: 100vh;
+  opacity: ${({ isOpen }) => isOpen ? 1 : 0};
+  transition: opacity 0.6s ease;
+  background: #8c8c8c96;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+`
+
 const StyledMenu = styled.div`
   display: none;
   letter-spacing: 1px;
@@ -74,35 +87,38 @@ const StyledMenu = styled.div`
 `;
 
 const HamburgerMenu = (props) => {
-  const { isOpen, isDark, switchThemeColor } = props;
+  const { isOpen, isDark, switchThemeColor, setIsOpen } = props;
   return (
-    <StyledMenu isOpen={isOpen} isDark={isDark}>
-      <NavLink
-        className="site-name"
-        to={{
-          pathname: '/portfolio',
-          state: { isBack: true }
-        }}
-      >
-        Jin Chiu
+    <Fragment>
+      <StyledMenu isOpen={isOpen} isDark={isDark}>
+        <NavLink
+          className="site-name"
+          to={{
+            pathname: '/portfolio',
+            state: { isBack: true }
+          }}
+        >
+          Jin Chiu
       </NavLink>
-      <div className="switch-box">
-        LIGHT
+        <div className="switch-box">
+          LIGHT
         <Switch
-          checked={isDark}
-          onChange={switchThemeColor}
-          color="#4c4c4c"
-        />
+            checked={isDark}
+            onChange={switchThemeColor}
+            color="#4c4c4c"
+          />
           DARK
       </div>
-      <div className="menu--social-box">
-        <SocialBox
-          isMenu
-          isDark={isDark}
-          direction="column"
-        />
-      </div>
-    </StyledMenu>
+        <div className="menu--social-box">
+          <SocialBox
+            isMenu
+            isDark={isDark}
+            direction="column"
+          />
+        </div>
+      </StyledMenu>
+      <BelowDiv isOpen={isOpen} onClick={() => setIsOpen(false)} />
+    </Fragment>
   );
 };
 
