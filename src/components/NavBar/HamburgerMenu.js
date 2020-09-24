@@ -9,7 +9,7 @@ import SocialBox from '../../components/SocialBox';
 const BelowDiv = styled.div`
   display: ${({ isOpen }) => isOpen ? 'unset' : 'none'};
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   opacity: ${({ isOpen }) => isOpen ? 1 : 0};
   transition: opacity 0.6s ease;
   background: #8c8c8c96;
@@ -24,9 +24,9 @@ const StyledMenu = styled.div`
   letter-spacing: 1px;
   font-size: 0.9rem;
   letter-spacing: 2px;
-  height: 100vh;
+  height: 100%;
   text-align: right;
-  padding: 5rem 0 2rem;
+  padding: 5rem 0 0rem;
   background: rgb(152, 167, 175, 0.7);
   @media ${RWD_SIZE.S} {
     width: 18rem;
