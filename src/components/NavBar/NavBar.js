@@ -8,8 +8,6 @@ import HamburgerIcon from './HamburgerIcon';
 import { COLORS, FONT_FAMILY, FONT_SIZE } from '../../styles/_variables';
 import Switch from '../../components/Switch';
 import { RWD_SIZE } from '../../styles/_variables';
-import { history } from '../../store';
-
 
 const StyledNavBar = styled.nav`
   display: flex;
@@ -24,6 +22,7 @@ const StyledNavBar = styled.nav`
     display: flex;
     align-self: center;
     .site-name{
+      text-decoration: none;
       font-family: ${FONT_FAMILY.SITE_NAME};
       font-weight: 600;
       font-size: ${FONT_SIZE.WEB.BASE};
@@ -101,8 +100,7 @@ const StyledNavLink = styled(NavLink)`
 `
 
 const NavBar = (props) => {
-  const { isDark, switchThemeColor } = props
-  const [isHambugerOpen, setIsHambugerOpen] = useState(false);
+  const { isDark, switchThemeColor, isHamMenuOpen, setHamMenuStatus } = props
 
   useEffect(() => {
     window.addEventListener('resize', reportWindowSize);
@@ -113,7 +111,7 @@ const NavBar = (props) => {
 
   const reportWindowSize = _debounce(() => {
     if (window.innerWidth > 500) {
-      setIsHambugerOpen(false)
+      setHamMenuStatus(false)
     }
   }, 600);
 
@@ -121,9 +119,15 @@ const NavBar = (props) => {
     <Fragment>
       <StyledNavBar isDark={isDark}>
         <div className="left-box">
-          <div className="site-name" onClick={() => history.push('/portfolio')}>
+          <NavLink
+            className="site-name"
+            to={{
+              pathname: '/portfolio',
+              state: { isBack: true }
+            }}
+          >
             Jin Chiu
-          </div>
+          </NavLink>
           <div className="switch-box">
             LIGHT
             <Switch
@@ -146,11 +150,12 @@ const NavBar = (props) => {
           ))}
         </div>
       </StyledNavBar>
-      <HamburgerIcon isHambugerOpen={isHambugerOpen} setIsHambugerOpen={setIsHambugerOpen} />
+      <HamburgerIcon isOpen={isHamMenuOpen} setIsOpen={setHamMenuStatus} />
       <HamburgerMenu
         isDark={isDark}
         switchThemeColor={switchThemeColor}
-        isHambugerOpen={isHambugerOpen}
+        isOpen={isHamMenuOpen}
+        setIsOpen={setHamMenuStatus}
       />
     </Fragment>
   );

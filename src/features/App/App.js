@@ -53,7 +53,9 @@ const Div = styled.div`
 const App = (props) => {
   const {
     isDark,
-    switchThemeColor
+    isHamMenuOpen,
+    switchThemeColor,
+    setHamMenuStatus,
   } = props;
 
 
@@ -62,6 +64,8 @@ const App = (props) => {
       <NavBar
         isDark={isDark}
         switchThemeColor={switchThemeColor}
+        isHamMenuOpen={isHamMenuOpen}
+        setHamMenuStatus={setHamMenuStatus}
       />
       <div>
         {props.children}
@@ -93,10 +97,12 @@ const App = (props) => {
 
 const mapStateToProps = (state) => ({
   isDark: state.common.isDark,
+  isHamMenuOpen: state.common.isHamMenuOpen,
 });
 
 const mapDispatchToProps = {
   switchThemeColor: CommonActions.switchThemeColor,
+  setHamMenuStatus: CommonActions.setHamMenuStatus,
 };
 
 export default compose(connect(

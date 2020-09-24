@@ -137,6 +137,7 @@ const Div = styled.div`
 
   @media ${RWD_SIZE.XS} {
     padding: 15% 10% 3rem;
+    min-height: 100vh;
     .wrapper{
       height: 50rem;
     }
@@ -153,6 +154,7 @@ const Div = styled.div`
         letter-spacing: 1.2px;
       }
       &--line{
+        display: unset;
         margin: 0 0 3.5rem;
       }
     }

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { compose } from 'recompose';
-import * as PortfolioActions from './PortfolioActions';
+import * as R from 'ramda';
+import * as CommonActions from '../../redux/CommonActions';
 import * as Mixins from '../../styles/_mixins';
 import { RWD_SIZE } from '../../styles/_variables';
 import Cover from './components/Cover';
@@ -45,11 +46,14 @@ const Div = styled.div`
 
 
 const Portfolio = (props) => {
+  const { isDark, setHamMenuStatus } = props;
 
-  const { test, testAction, isDark } = props;
-  function handleClick() {
-    testAction(4);
-  }
+  useEffect(() => {
+    if (R.has('isBack')(props.location.state)) {
+      setHamMenuStatus(false)
+    }
+  }, [])
+
 
   return (
     <Div isDark={isDark} >
@@ -71,11 +75,10 @@ const Portfolio = (props) => {
 
 const mapStateToProps = (state) => ({
   isDark: state.common.isDark,
-  test: state.portfolio.test,
 });
 
 const mapDispatchToProps = {
-  testAction: PortfolioActions.testAction,
+  setHamMenuStatus: CommonActions.setHamMenuStatus,
 };
 
 export default compose(connect(mapStateToProps, mapDispatchToProps))(Portfolio);
