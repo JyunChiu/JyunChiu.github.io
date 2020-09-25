@@ -12,7 +12,7 @@ import { PROJECTS_INFO } from './PortfolioConsts';
 
 const Div = styled.div`
   ${props => Mixins.bgBase(props.isDark)};
-  padding: 0rem 8% ;
+  padding: 4rem 8%;
   display: flex;
   justify-content: center;
   align-items: center;

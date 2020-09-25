@@ -13,6 +13,7 @@ export const PROJECTS_INFO = [
     path: '/portfolio/myWeb',
     year: '2020',
     bc: '#95aba9',
+    titleSize: '1.5rem'
   },
   {
     title: 'Daily Practice',

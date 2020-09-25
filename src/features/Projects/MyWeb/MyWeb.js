@@ -5,7 +5,6 @@ import { compose } from 'recompose';
 import * as Mixins from '../../../styles/_mixins';
 import { COLORS, FONT_SIZE, RWD_SIZE } from '../../../styles/_variables';
 import { WEB_CONTENT, IMG } from './Consts';
-import TagSection from '../../../components/TagSection';
 
 const Div = styled.div`
   ${props => Mixins.bgBase(props.isDark)};
@@ -19,6 +18,11 @@ const Div = styled.div`
     ${props => Mixins.imgShadow(props.isDark)};
   }
   .wrapper{
+    .subtitle{
+      opacity: 0.5;
+      font-size: ${FONT_SIZE.MOB.BASE};
+      margin: 0 0 0.6rem;
+    }
     .title{
       opacity: 0.7;
       letter-spacing: 2px;
@@ -29,11 +33,11 @@ const Div = styled.div`
     .content{
       display: flex;
       flex-direction: column;
-      .text{
+      &--text{
         white-space: pre-line;
         line-height: 1.8rem;
         word-break: break-word;
-        width: 60%
+        width: 100%
       }
     }
     .text-n-img{
@@ -102,21 +106,21 @@ const Div = styled.div`
     align-items: center;
     margin: 4rem 0 2rem;
     position: relative;
-    justify-content: center;
     &--L{
+      margin: 0 0 0 9%;
       width: 75%;
     }
     &--M{
       position: absolute;
       width: 25%;
-      right: -10%;
-      bottom: 5%;
+      right: -5%;
+      bottom: 0%;
     }
     &--S{
       position: absolute;
       width: 10%;
-      bottom: 3%;
-      left: 3%;
+      bottom: 0%;
+      left: 0%;
       z-index: 2;
     }
   }
@@ -133,6 +137,9 @@ const Div = styled.div`
           margin: 4rem 0;
           }
         }
+      .subtitle{
+        text-align: center;
+      }
       .title{
         letter-spacing: 2px;
         font-size: ${FONT_SIZE.MOB.TITLE};
@@ -142,7 +149,7 @@ const Div = styled.div`
       .content{
         display: flex;
         flex-direction: column;
-        .text{
+        &--text{
           text-align: center;
           width: 100%;
         }
@@ -198,11 +205,10 @@ const Div = styled.div`
     }
     .screenshot-box{
       display: flex;
-      align-items: center;
       margin: 3rem 0 2rem;
       position: relative;
-      justify-content: center;
       &--L{
+        margin: 0 0 0 6.5%;
         width: 85%;
       }
       &--M{
@@ -228,8 +234,9 @@ const MyWeb = (props) => {
   return (
     <Div isDark={isDark}>
       <div className="wrapper">
+        <div className="subtitle">| React、Styled-Components |</div>
         <div className='title'>
-          本站設計理念
+          Design Concept
         </div>
         <div className='content'>
           <div className='text-n-img'>
@@ -249,7 +256,7 @@ const MyWeb = (props) => {
                 <img src={IMG.pantone333333} alt='' />
               </div>
             </div>
-            <div className='text'>
+            <div className='text-n-img--text'>
               {WEB_CONTENT.SECTION_ONE__SECOND}
             </div>
           </div>
@@ -257,10 +264,10 @@ const MyWeb = (props) => {
       </div>
       <div className="wrapper">
         <div className='title'>
-          互動性
+          Interaction
         </div>
         <div className='content'>
-          <div className='text'>
+          <div className='content--text'>
             {WEB_CONTENT.SECTION_TWO__FIRST}
           </div>
           <div className='animation-box'>
@@ -301,6 +308,28 @@ const MyWeb = (props) => {
             </div>
             <div className='screenshot-box--S'>
               <img src={IMG.b_s} alt='' />
+            </div>
+          </div>
+          <div className='screenshot-box'>
+            <div className='screenshot-box--S'>
+              <img src={IMG.w2_s} alt='' />
+            </div>
+            <div className='screenshot-box--L'>
+              <img src={IMG.w2_l} alt='' />
+            </div>
+            <div className='screenshot-box--M'>
+              <img src={IMG.w2_m} alt='' />
+            </div>
+          </div>
+          <div className='screenshot-box'>
+            <div className='screenshot-box--L'>
+              <img src={IMG.b2_l} alt='' />
+            </div>
+            <div className='screenshot-box--M'>
+              <img src={IMG.b2_m} alt='' />
+            </div>
+            <div className='screenshot-box--S'>
+              <img src={IMG.b2_s} alt='' />
             </div>
           </div>
         </div>

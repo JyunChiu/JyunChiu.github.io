@@ -10,8 +10,7 @@ import FileSaver from 'file-saver';
 
 const Div = styled.div`
   ${props => Mixins.bgBase(props.isDark)};
-  min-height: 90vh;
-  padding: 0rem 18% 3rem;
+  padding: 5rem 18% 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,17 +86,14 @@ const Div = styled.div`
 
 
   @media ${RWD_SIZE.S} {
-    min-height: 100vh;
-    align-items: unset;
-    padding: 20% 12% 3rem;
+    padding: 6% 10%;
     .wrapper{
       width: 100%;
     }
   }
 
   @media (max-width: 769px) {
-    align-items: unset;
-    padding: 12% 10% 3rem;
+    padding: 12% 10%;
     .wrapper{
       width: 100%;
       height: 55rem;
@@ -137,7 +133,6 @@ const Div = styled.div`
 
   @media ${RWD_SIZE.XS} {
     padding: 15% 10% 3rem;
-    min-height: 100vh;
     .wrapper{
       height: 50rem;
     }
@@ -181,7 +176,6 @@ const About = (props) => {
     // );
   }
 
-  // console.log('HOME props', props);
   return (
     <Div isDark={isDark}>
       <div className='wrapper'>

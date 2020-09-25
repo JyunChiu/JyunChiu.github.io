@@ -22,6 +22,11 @@ const Div = styled.div`
     ${props => Mixins.imgShadow(props.isDark)};
   }
   .wrapper{
+    .subtitle{
+      opacity: 0.5;
+      font-size: ${FONT_SIZE.MOB.BASE};
+      margin: 0 0 0.6rem;
+    }
     .title{
       opacity: 0.7;
       letter-spacing: 2px;
@@ -109,6 +114,9 @@ const Div = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
+      .subtitle{
+        text-align: center;
+      }
       .title{
         letter-spacing: 2px;
         font-size: ${FONT_SIZE.MOB.TITLE};
@@ -171,6 +179,7 @@ const Rebas = (props) => {
   return (
     <Div isDark={isDark}>
       <div className="wrapper">
+        <div className="subtitle">| React、Styled-Components、Axios、Sketch、Illustrator |</div>
         <div className='title'>
           Inturduction
         </div>
@@ -178,11 +187,11 @@ const Rebas = (props) => {
           <div className="text">
             {REBAS_INTUR.content}
           </div>
-          <TagSection
+          {/* <TagSection
             isDark={isDark}
             label="In charge of: "
             tags={['Mockup', 'Front-End Development']}
-          />
+          /> */}
           {/* {REBAS_INTUR.content} */}
           <div className="visit-btn" onClick={() => window.open('https://www.rebas.tw/')}>
             Visit Site ⇀
