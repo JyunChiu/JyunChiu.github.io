@@ -24,7 +24,7 @@ const StyledMenu = styled.div`
   letter-spacing: 1px;
   font-size: 0.9rem;
   letter-spacing: 2px;
-  height: 100%;
+  height: 95%;
   text-align: right;
   padding: 5rem 0 0rem;
   background: rgb(152, 167, 175, 0.7);

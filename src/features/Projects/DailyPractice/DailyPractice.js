@@ -170,9 +170,7 @@ const StyledWrapper = styled.div`
       margin: 1.5rem 0 0 0.6rem;
       &--year{
         width: 100%;
-        margin: 0;
-        padding: 0 1rem;
-        text-align: right;
+        margin: 1rem 0 0.6rem;
       }
       &--box{
         padding: 0 0 0 0.6rem;

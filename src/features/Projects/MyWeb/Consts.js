@@ -20,7 +20,7 @@ import b2_s from './Screenshot/b2_s.png';
 
 export const WEB_CONTENT = {
   SECTION_ONE__FIRST: 'In the beginning, I struggled with the choice of dark or light color which represent fresh and steady vibes as the key vision of the website. Both of them are the impressions I would like to express to everyone from the website.\n\nTherefore, it was finally designed to present by switchable method which is able to let users decide by themselves according to their preferences. It make the website to be more flexible as well.',
-  SECTION_ONE__SECOND: 'Finally, I decide to use black and white to represent dark and light.\n\nRather than basic black and white, I chose the colors that have a little gray tone in it. Which make the visualization more naturl and softer than original.',
+  SECTION_ONE__SECOND: 'Finally, I decide to use black and white to represent dark and light.\n\nRather than basic black and white, I chose the colors that have a little gray tone in it. Which make the visualization more natural and softer than original.',
   SECTION_TWO__FIRST: 'Smooth animations can impove accessibility and efficiency of user experiencement.',
   // SECTION_ONE__FIRST: '一開始在構想網頁的主色系時，就在深色和淺色中猶豫不決，因為淺色的清新以及深色的穩重都是想透過這個網站帶給人的感覺。因此後來決定以可切換的方式來呈現，讓使用者可以依照喜好或當下的環境去做選擇。',
   // SECTION_ONE__SECOND: ' 最後選擇最基本的黑與白來代表深與淺色系。\n但不是純黑與純白，是加了點灰調在裡面的顏色，\n整體在視覺上會比原本的純色更自然、更柔和。',

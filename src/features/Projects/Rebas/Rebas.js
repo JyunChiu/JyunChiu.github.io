@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { compose } from 'recompose';
 import * as Mixins from '../../../styles/_mixins';
 import { COLORS, FONT_SIZE, RWD_SIZE } from '../../../styles/_variables';
-import { REBAS_INTUR } from './Consts';
+import { REBAS_CONTENT } from './Consts';
 import TagSection from '../../../components/TagSection';
 import web_0 from './Screenshot/web_0.png';
 import mobile_0 from './Screenshot/mobile_0.png';
@@ -181,18 +181,12 @@ const Rebas = (props) => {
       <div className="wrapper">
         <div className="subtitle">| React、Styled-Components、Axios、Sketch、Illustrator |</div>
         <div className='title'>
-          Inturduction
+          Intorduction
         </div>
         <div className='content'>
           <div className="text">
-            {REBAS_INTUR.content}
+            {REBAS_CONTENT.INTOR}
           </div>
-          {/* <TagSection
-            isDark={isDark}
-            label="In charge of: "
-            tags={['Mockup', 'Front-End Development']}
-          /> */}
-          {/* {REBAS_INTUR.content} */}
           <div className="visit-btn" onClick={() => window.open('https://www.rebas.tw/')}>
             Visit Site ⇀
             <div className='visit-btn--line' />
@@ -201,7 +195,17 @@ const Rebas = (props) => {
       </div>
       <div className="wrapper">
         <div className='title'>
-          The wireframes that owner provided
+          Design Concept
+        </div>
+        <div className='content'>
+          <div className="text">
+            {REBAS_CONTENT.CONCEPT}
+          </div>
+        </div>
+      </div>
+      <div className="wrapper">
+        <div className='title'>
+          The wireframes that client provided
         </div>
         <div className='content'>
           <div className="drafts">

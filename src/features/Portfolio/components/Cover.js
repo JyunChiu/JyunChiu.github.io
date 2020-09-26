@@ -19,7 +19,7 @@ const StyledNavLink = styled(NavLink)`
 
   &.disabled{
     box-shadow: 0px 4px 6px -1px ${props => props.isDark ? props.bc : '#c7c7c7'};
-    opacity: 0.6;
+    opacity: 0.4;
     cursor: not-allowed;
     pointer-events: none;
   }
@@ -46,7 +46,7 @@ const StyledNavLink = styled(NavLink)`
 
   .title{
     font-family: ${FONT_FAMILY.PROJECT_NO};
-    font-size: ${ props => props.titleSize || '1.8rem'};
+    font-size: ${props => props.titleSize || '1.8rem'};
     background: ${props => props.bc};
     margin: 0.6rem 1.8rem 0 0rem;
     padding: 2.8rem 1rem 0.8rem 2rem;

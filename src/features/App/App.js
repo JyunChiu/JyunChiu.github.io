@@ -13,7 +13,7 @@ import SocialBox from '../../components/SocialBox';
 
 const Div = styled.div`
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 
   .social-box{
     display: flex;
