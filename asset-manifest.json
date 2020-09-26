@@ -1,20 +1,20 @@
 {
   "files": {
-    "About.js": "/static/js/About.15046e43.chunk.js",
-    "About.js.map": "/static/js/About.15046e43.chunk.js.map",
+    "About.js": "/static/js/About.4eb18ceb.chunk.js",
+    "About.js.map": "/static/js/About.4eb18ceb.chunk.js.map",
     "NotFound.js": "/static/js/NotFound.1f711b5d.chunk.js",
     "NotFound.js.map": "/static/js/NotFound.1f711b5d.chunk.js.map",
     "main.css": "/static/css/main.48659c1d.chunk.css",
     "main.js": "/static/js/main.3c526ed4.chunk.js",
     "main.js.map": "/static/js/main.3c526ed4.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.551c5de8.js",
-    "runtime-main.js.map": "/static/js/runtime-main.551c5de8.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f25c1f75.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f25c1f75.js.map",
     "static/js/4.1f260c1b.chunk.js": "/static/js/4.1f260c1b.chunk.js",
     "static/js/4.1f260c1b.chunk.js.map": "/static/js/4.1f260c1b.chunk.js.map",
     "static/js/5.f3f2a74f.chunk.js": "/static/js/5.f3f2a74f.chunk.js",
     "static/js/5.f3f2a74f.chunk.js.map": "/static/js/5.f3f2a74f.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.084e4df0dcf4bf30970e27636d283939.js": "/precache-manifest.084e4df0dcf4bf30970e27636d283939.js",
+    "precache-manifest.d1d1c9e58c7025efd56cb62494e7de71.js": "/precache-manifest.d1d1c9e58c7025efd56cb62494e7de71.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.48659c1d.chunk.css.map": "/static/css/main.48659c1d.chunk.css.map",
     "static/js/4.1f260c1b.chunk.js.LICENSE.txt": "/static/js/4.1f260c1b.chunk.js.LICENSE.txt",
@@ -39,7 +39,7 @@
     "static/media/draft_1.png": "/static/media/draft_1.d8c3a3d9.png",
     "static/media/errorPage.png": "/static/media/errorPage.249b804b.png",
     "static/media/jin_chiu_cv_en.pdf": "/static/media/jin_chiu_cv_en.ceaaa5af.pdf",
-    "static/media/jin_chiu_cv_mandarin.pdf": "/static/media/jin_chiu_cv_mandarin.d797f85a.pdf",
+    "static/media/jin_chiu_cv_mandarin.pdf": "/static/media/jin_chiu_cv_mandarin.c873859f.pdf",
     "static/media/mobile_0.png": "/static/media/mobile_0.0a87fe4c.png",
     "static/media/musicPlayer.png": "/static/media/musicPlayer.3ef5f255.png",
     "static/media/pantone333333.png": "/static/media/pantone333333.5e95a55e.png",
@@ -56,7 +56,7 @@
     "static/media/web_0.png": "/static/media/web_0.77b4c25c.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.551c5de8.js",
+    "static/js/runtime-main.f25c1f75.js",
     "static/js/4.1f260c1b.chunk.js",
     "static/css/main.48659c1d.chunk.css",
     "static/js/main.3c526ed4.chunk.js"
