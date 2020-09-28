@@ -11,6 +11,8 @@ const StyledFooter = styled.footer`
   letter-spacing: 3px;
   font-size: 12px;
   padding: 1rem 0 2rem;
+  width: 100%;
+  position: absolute;
   
   >div{
     transform: scale(0.8);

@@ -87,6 +87,7 @@ const Div = styled.div`
 
   @media ${RWD_SIZE.S} {
     padding: 6% 10%;
+
     .wrapper{
       width: 100%;
     }
@@ -96,16 +97,17 @@ const Div = styled.div`
     padding: 12% 10%;
     .wrapper{
       width: 100%;
-      height: 55rem;
+      height: 52rem;
       flex-direction: column;
       align-items: center;
+      justify-content: flex-start;
       letter-spacing: 2px;
     }
     .left{
       align-items: center;
       width: 55%;
       &--title{
-        margin: -4.6rem 0 4rem 0rem;
+        margin: -4.7rem 0 3rem 0rem;
         font-weight: 700;
       }
       &--content{
@@ -117,14 +119,19 @@ const Div = styled.div`
       &--line{
         display: unset;
         margin: 0 0 1.5rem;
-        width: 1.8rem;
-        height: 3px;
+        width: 1.2rem;
+        height: 2px;
         background: ${props => props.isDark ? COLORS.WHITE : COLORS.BLACK};
       }
     }
     .right{
       width: 50%;
-      margin: 5rem 0 0;
+      margin: 0rem 0 0;
+      position: relative;
+      img{
+        position: absolute;
+        top: 4rem;
+      }
     }
     .resume-btn{
       margin: 1.5rem 0 0;
@@ -132,16 +139,14 @@ const Div = styled.div`
   }
 
   @media ${RWD_SIZE.XS} {
-    padding: 15% 10% 3rem;
+    padding: 20% 10% 22%;
     .wrapper{
-      height: 50rem;
+      height: 46rem;
     }
     .left{
       align-items: center;
       width: 88%;
       &--title{
-        margin: -4.4rem 0 3rem 0rem;
-        font-weight: 700;
         font-size: 2.2rem;
       }
       &--content{
@@ -150,12 +155,15 @@ const Div = styled.div`
       }
       &--line{
         display: unset;
-        margin: 0 0 3.5rem;
+        margin: 0 0 1.5rem;
       }
     }
     .right{
       width: 80%;
-      margin: 4rem 0 0;
+      margin: 0rem 0 0;
+      img{
+        top: 3rem;
+      }
     }
   }
 `;
