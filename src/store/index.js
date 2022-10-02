@@ -1,4 +1,5 @@
 
+// import { createBrowserHistory as createHistory } from 'history';
 import { createHashHistory as createHistory } from 'history';
 import configureStore from './configureStore';
 

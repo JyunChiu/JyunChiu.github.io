@@ -76,21 +76,21 @@ const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   color: ${props => props.isDark ? COLORS.WHITE : COLORS.BLACK};
   opacity: 0.4;
-
-  &.current{
-    opacity: 1;
-    &:after {
-      content: '';
-      display: block;
-      border-bottom: 4px solid #7f939c;
-      width: 2rem;
-      height: 0.4rem;
-      transition: width 0.6s ease all;
-    }
+  &:after {
+    content: '';
+    display: block;
+    border-bottom: 4px solid #7f939c;
+    width: 0;
+    height: 0.4rem;
+    transition: 0.4s ease;
+    transition-property: width, opacity;
   }
 
-  &:hover{
-    opacity: .8;
+  &.current, &:hover{
+    opacity: 1;
+    &:after {
+      width: 2rem;
+    }
   }
 
   @media ${RWD_SIZE.S} {

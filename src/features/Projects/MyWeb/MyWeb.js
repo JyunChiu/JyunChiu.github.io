@@ -55,7 +55,7 @@ const Div = styled.div`
       }
     }
     
-  &:not(:first-child){
+    &:not(:first-child){
     &:before{
       content: '';
       display: inline-block;
@@ -234,7 +234,7 @@ const MyWeb = (props) => {
   return (
     <Div isDark={isDark}>
       <div className="wrapper">
-        <div className="subtitle">| React、Styled-Components |</div>
+        <div className="subtitle">| React、Redux、Styled-Components |</div>
         <div className='title'>
           Design Concept
         </div>

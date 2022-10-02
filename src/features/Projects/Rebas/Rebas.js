@@ -179,7 +179,7 @@ const Rebas = (props) => {
   return (
     <Div isDark={isDark}>
       <div className="wrapper">
-        <div className="subtitle">| React、Styled-Components、Axios、Sketch、Illustrator |</div>
+        <div className="subtitle">| React、Redux、Styled-Components、Axios、Sketch、Illustrator |</div>
         <div className='title'>
           Intorduction
         </div>

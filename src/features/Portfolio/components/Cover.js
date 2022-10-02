@@ -16,6 +16,7 @@ const StyledNavLink = styled(NavLink)`
   border-radius: 5px;
   letter-spacing: 2px;
   position: relative;
+  transition: .5s ease all;
 
   &.disabled{
     box-shadow: 0px 4px 6px -1px ${props => props.isDark ? props.bc : '#c7c7c7'};
@@ -28,7 +29,6 @@ const StyledNavLink = styled(NavLink)`
     opacity: 0.8;
     transform: translateY(5px);
     box-shadow: 0px 4px 6px -1px ${props => props.isDark ? props.bc : '#c7c7c7'};
-    transition: .5s ease all;
   }
 
   .number{
@@ -54,7 +54,7 @@ const StyledNavLink = styled(NavLink)`
     width: 45%;
     height: 60%;
     word-break: break-word;
-    line-height: 3rem;
+    line-height:${props => props.titleLineHeight};
     white-space: pre-line;
   }
 
@@ -109,6 +109,12 @@ const StyledNavLink = styled(NavLink)`
     height: 15rem;
     padding: 2rem;
     align-items:space-around;
+    &.baseballTraining{
+      .title{
+        font-size: 5vw;
+        line-height: 8vw;
+      }
+    }
     .number{
       font-size: 2.8rem;
       width: 15%;
@@ -142,12 +148,19 @@ const Cover = (props) => {
   const {
     isDark,
     num,
-    item: { title, desc, path, year, bc, titleSize, disabled }
+    item: { title, desc, path, year, bc, titleSize, disabled, titleLineHeight = '3rem', className = '' }
   } = props;
 
 
   return (
-    <StyledNavLink to={path} bc={bc} isDark={isDark} titleSize={titleSize} className={disabled ? 'disabled' : ''}>
+    <StyledNavLink
+      to={path}
+      bc={bc}
+      isDark={isDark}
+      titleSize={titleSize}
+      titleLineHeight={titleLineHeight}
+      className={disabled ? `disabled ${className}` : className}
+    >
       <div className='number'>{num}</div>
       <div className='wrapper'>
         <div className='title'>{title}</div>

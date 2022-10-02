@@ -29,6 +29,11 @@ const Routes = () => (
       />
       <Route
         exact
+        path="/portfolio/pregameAnalysis"
+        component={loadable(() => import(/* webpackChunkName: "About" */ '../features/Projects/PregameAnalysis'))}
+      />
+      <Route
+        exact
         path="/portfolio/rebas"
         component={loadable(() => import(/* webpackChunkName: "About" */ '../features/Projects/Rebas'))}
       />
@@ -39,8 +44,8 @@ const Routes = () => (
       />
       <Route
         exact
-        path="/portfolio/others"
-      // component={loadable(() => import(/* webpackChunkName: "About" */ '../features/Projects/Others'))}
+        path="/portfolio/baseballTrainingSystem"
+        component={loadable(() => import(/* webpackChunkName: "About" */ '../features/Projects/BaseballTrainingSystem'))}
       />
       <Route
         exact

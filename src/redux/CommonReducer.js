@@ -2,7 +2,7 @@ import { handleActions } from 'redux-actions';
 import { actionTypes } from './CommonActions';
 
 const initialState = {
-  isDark: false,
+  isDark: true,
   isHamMenuOpen: false,
 };
 
