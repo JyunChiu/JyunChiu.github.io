@@ -46,7 +46,7 @@ export const PROJECTS_INFO = [
     title: 'Others',
     desc: '(Building)\nNot yet ready',
     path: '',
-    year: '2017 - present',
+    year: 'present',
     titleSize: '2rem',
     bc: '#679fb5',
     disabled: true,

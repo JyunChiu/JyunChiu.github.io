@@ -30,7 +30,7 @@ const Footer = (props) => {
   return (
     <StyledFooter isDark={isDark}>
       <div>
-        © Designed And Coded By JIN CHIU  2020
+        © Designed And Coded By JIN CHIU  {new Date().getFullYear()}
       </div>
     </StyledFooter >
   );
